@@ -1,0 +1,384 @@
+---
+layout: 'base.html'
+description: 'Meta description for the page'
+metaTitle: 'Texas Medical Consultants'
+preloadImg: '/images/landing-1920w.webp'
+preloadCSS: '/css/local.css'
+permalink: '/'
+eleventyNavigation:
+  key: Home
+  order: 100
+---
+<!-- Enter html code below -->
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero">
+  <div class="cs-container">
+    <div class="cs-flex-group">
+      <!-- <span class="cs-topper">Texas Medical Consultants</span> -->
+      <h1 class="cs-title">Empowering wellness through comprehensive care</h1>
+      <p class="cs-text">
+        Take charge of your health with the help of our specialized therapies and products. 
+      </p>
+      <a href="" class="cs-button-solid">
+        <span class="front">
+          Explore More
+        </span>
+      </a>
+      <a href="" class="cs-button-transparent">
+        <!-- <img
+          class="cs-img"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
+          alt="play icon"
+          width="17"
+          height="17"
+        /> -->
+        <span class="front">
+          Learn More
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Background Image -->
+  {% image './src/images/landing.jpg', 'mountains', 'cs-picture', 'eager', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+</section>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services" class="services">
+  <!-- Get Icons From flaticon.com -->
+  <div class="card">
+    <picture>
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="/assets/svgs/medicine.gif"
+        alt="appliance"
+        width="48"
+        height="48"
+/>
+    </picture>
+    <h2>Vitamins</h2>
+    <p>All products are hand-selected by our team of medical professionals to ensure you receive the best possible support for your individual needs.</p>
+  </div>
+  <div class="card">
+    <picture>
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="/assets/svgs/dropper.gif"
+        alt="appliance"
+        width="48"
+        height="48"
+/>
+    </picture>
+    <h2>Therapy</h2>
+    <p> In addition to personal injury rehabilitation, our hydration and oxygen therapies garuantee you will be back at peak performance in no time. </p>
+  </div>
+  <div class="card">
+    <picture>
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="/assets/svgs/squats.gif"
+        alt="appliance"
+        width="48"
+        height="48"
+/>
+    </picture>
+    <h2>Wellness</h2>
+    <p> We are dedicated to providing comprehensive wellness ervices to help you achieve optimal health and well-being.</p>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs">
+  <div class="cs-container">
+    <!-- Left Image Section -->
+    <div class="cs-left">
+      {% image './src/images/hydration.png', 'house', 'cs-picture cs-picture1', 'lazy'%}
+      {% image './src/images/vitamins.jpg', 'house', 'cs-picture cs-picture2', 'lazy'%}
+    </div>
+    <!-- Right Content Section-->
+    <div class="card">
+      <!-- <span class="cs-topper">About Us</span> -->
+      <h2 class="cs-title">About Us</h2>
+      <p class="cs-text">
+        We offer a wide range of services to address your specific needs, including oxygen therapy, hydration therapy, rehab, personal injury recovery, and vitamins. 
+        
+        Our oxygen therapy helps boost energy levels and improve cognitive function, while our hydration therapy replenishes fluids and essential nutrients to improve overall well-being.
+        
+        Our rehab services are designed to help you recover from injuries or illnesses, with a focus on restoring mobility, strength, and function. We also offer personal injury recovery programs to help you recover from accidents and other traumatic events.
+      </p>
+      <p class="cs-text">
+        In addition, we believe in the power of vitamins to support overall health and wellness. Our team can help you choose the right vitamins and supplements to meet your unique needs and goals.            
+      </p>
+      <div class="cs-flex-group">
+        <p class="cs-flex-p">
+          At our practice, we are committed to providing exceptional care in a comfortable and welcoming environment. We strive to build lasting relationships with our patients, and we look forward to helping you achieve your health and wellness goals.
+        </p>
+        <span class="cs-name">Doc's name</span>
+        <span class="cs-job">Title</span>
+        <img
+          class="cs-quote-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
+          alt="gavel"
+          width="136"
+          height="77"
+/>
+      </div>
+      <a href="/about" class="button-solid">
+        <span class="front">
+          About Us
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--            Extra Content To Rank             -->
+<!-- ============================================ -->
+
+
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
+<section id="gallery-header">
+  <div class="cs-container">
+    <span class="cs-topper">Scheduling Forms</span>
+  </div>
+</section>
+<section id="gallery" class="gallery">
+
+    <!-- <h2 class="cs-title">Et orci volutpat, back up generator installations</h2> -->
+    <div class="card">
+      <h2>Form 1</h2>
+      <p>Form 1 Desc</p>
+      <a href="/assets/pdfs/test.pdf" download>
+        <picture>
+            <img
+              aria-hidden="true"
+              decoding="async"  
+              src="/assets/svgs/download.gif"
+              width="48"
+              height="48"
+            />
+        </picture>
+      </a>
+    </div>
+    <div class="card">
+      <h2>Form 2</h2>
+      <p>Form 2 Desc</p>
+      <a href="/assets/pdfs/test.pdf" download>
+        <picture>
+            <img
+              aria-hidden="true"
+              decoding="async"  
+              src="/assets/svgs/download.gif"
+              width="48"
+              height="48"
+            />
+        </picture>
+      </a>
+    </div>
+    <div class="card">
+      <h2>Form 3</h2>
+      <p> Form 3 Desc</p>
+      <a href="/assets/pdfs/test.pdf" download>
+        <picture>
+            <img
+              aria-hidden="true"
+              decoding="async"  
+              src="/assets/svgs/download.gif"
+              width="48"
+              height="48"
+            />
+        </picture>
+      </a>
+    </div>
+    <div class="card">
+      <h2>Form 4</h2>
+      <p>Form 4 Desc</p>
+      <a href="/assets/pdfs/test.pdf" download>
+        <picture>
+            <img
+              aria-hidden="true"
+              decoding="async"  
+              src="/assets/svgs/download.gif"
+              width="48"
+              height="48"
+            />
+        </picture>
+      </a>
+    </div>
+    <div class="card">
+      <h2>Form 5</h2>
+      <p>Form 5 Desc</p>
+      <a href="/assets/pdfs/test.pdf" download>
+        <picture>
+            <img
+              aria-hidden="true"
+              decoding="async"  
+              src="/assets/svgs/download.gif"
+              width="48"
+              height="48"
+            />
+        </picture>
+      </a>
+    </div>
+    <div class="card">
+      <h2>Form 6</h2>
+      <p>Form 6 Desc</p>
+      <a href="/assets/pdfs/test.pdf" download>
+        <picture>
+            <img
+              aria-hidden="true"
+              decoding="async"  
+              src="/assets/svgs/download.gif"
+              width="48"
+              height="48"
+            />
+        </picture>
+      </a>
+    </div>
+  
+    <!-- <a href="/projects" class="button-solid">View Full Gallery</a> -->
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews">
+  <div class="cs-container">
+    <!-- <span class="cs-topper">Our Reviews</span> -->
+    <h2 class="cs-title">Words From Our Customers</h2>
+    <p class="cs-text">
+      We've had many clients find success through our programs and products. Here are some kind words from those we've worked with. 
+    </p>
+    <ul class="cs-card-group">
+      <!-- Review 1 -->
+      <li class="cs-item">
+        <img
+          class="cs-item-img"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile5.png"
+          alt="profile picture"
+          width="80"
+          height="80"
+/>
+        <p class="cs-item-p">
+          "I had been suffering from chronic fatigue and brain fog for months, but after just a few sessions of oxygen therapy at this practice, I felt like a new person! The team was extremely knowledgeable and made me feel at ease throughout the entire process. I've noticed a significant improvement in my overall energy levels."
+        </p>
+        <span class="cs-reviewer">
+          Ethan Patel
+          <span class="cs-desc">Project Manager</span>
+        </span>
+        <img
+          class="cs-item-stars"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
+          alt="stars"
+          width="96"
+          height="16"
+/>
+      </li>
+      <!-- Review 2 -->
+      <li class="cs-item">
+        <img
+          class="cs-item-img"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile-4.png"
+          alt="profile picture"
+          width="80"
+          height="80"
+/>
+        <p class="cs-item-p">
+          "I came to this practice after a car accident that left me with severe back pain and limited mobility. I can't thank them enough for their expertise and dedication to my recovery. I highly recommend this practice to anyone in need of top-notch healthcare and rehabilitation services."
+        </p>
+        <span class="cs-reviewer">
+          Sophie Williams
+          <span class="cs-desc">Restauraunt Owner</span>
+        </span>
+        <img
+          class="cs-item-stars"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
+          alt="stars"
+          width="96"
+          height="16"
+/>
+      </li>
+    </ul>
+    <a href="/reviews" class="cs-buttons">
+      <span class="front">
+        Explore More
+      </span>
+    <a href="/contact" class="cs-buttons">
+      <span class="front">
+        Contact Us 
+      </span> 
+    </a>
+  </div>
+</section>
+<!-- ============================================ -->
+<!--             Final Call to Action             -->
+<!-- ============================================ -->
+
+<!-- <section id="cta">
+  <div class="container">
+    <h2 class="title">
+      Get It Done <br/>
+      With Us Today
+    </h2>
+    <p>
+      Say something catchy, informative, and encouraging to click the button to go to the contact page. I like to add
+      these to the bottom of all pages.
+    </p>
+    <a href="/contact" class="cs-buttons">
+      <span class="front">
+        Contact Us 
+      </span>
+  </div>
+  {% image './src/images/cabinets2.jpg', 'kitchen cabinets', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+</section> -->
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window
+      .netlifyIdentity
+      .on('init', (user) => {
+        if (!user) {
+          window
+            .netlifyIdentity
+            .on('login', () => {
+              document.location.href = '/admin/';
+            });
+        }
+      });
+  }
+</script>

@@ -1,0 +1,73 @@
+---
+layout: 'base.html'
+description: "Meta description for the page"
+metaTitle: 'Title that shows up on google searches'
+tagTitle: 'About'
+preloadImg: '/images/cabinets2-1920w.webp'
+preloadCSS: '/css/about.css'
+permalink: 'about/'
+eleventyNavigation:
+    key: About Us
+    order: 200
+---
+
+<!-- Enter html code below -->
+
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
+
+<section id="int-hero">
+  <h1 id="home-h">About Us</h1>
+  {% image './src/images/aboutus.jpg', 'aboutus', '', 'lazy', '(max-width: 850px) 850px, 1920px'%}
+</section>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs">
+  <div class="cs-container">
+    <!-- Left Image Section -->
+    <div class="cs-left">
+      {% image './src/images/hydration.png', 'hydration', 'cs-picture cs-picture1', 'lazy'%}
+      {% image './src/images/vitamins.jpg', 'vitamins', 'cs-picture cs-picture2', 'lazy'%}
+    </div>
+    <!-- Right Content Section-->
+    <div class="cs-right">
+      <!-- <span class="cs-topper">About Us</span> -->
+      <h2 class="cs-title">Texas Medical Consultants</h2>
+      <p class="cs-text">
+        We offer a wide range of services to address your specific needs, including oxygen therapy, hydration therapy, rehab, personal injury recovery, and vitamins. Our oxygen therapy helps boost energy levels and improve cognitive function, while our hydration therapy replenishes fluids and essential nutrients to improve overall well-being.
+        Our rehab services are designed to help you recover from injuries or illnesses, with a focus on restoring mobility, strength, and function. We also offer personal injury recovery programs to help you recover from accidents and other traumatic events.
+      </p>
+      <p class="cs-text">
+        In addition, we believe in the power of vitamins to support overall health and wellness. Our team can help you choose the right vitamins and supplements to meet your unique needs and goals.            
+      </p>
+      <div class="cs-flex-group">
+        <p class="cs-flex-p">
+          At our practice, we are committed to providing exceptional care in a comfortable and welcoming environment. We strive to build lasting relationships with our patients, and we look forward to helping you achieve your health and wellness goals.
+        </p>
+        <span class="cs-name">Doc's</span>
+        <span class="cs-job">Title</span>
+        <img class="cs-quote-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="gavel" width="136" height="77">
+      </div>
+      <!-- <a href="" class="button-solid">More About Us</a> -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--             Final Call to Action             -->
+<!-- ============================================ -->
+  <!-- 
+  <section id="cta">
+    <div class="container">
+      <h2 class="title">Get It Done <br> With Us Today</h2>
+      <p>
+              Say something catchy, informative, and encouraging to click the button to go to the contact page.  I like to add these to the bottom of all pages.
+          </p>
+      <a href="/contact.html" class="button-solid">Free Estimate</a>
+    </div>
+    {% image './src/images/cabinets2.jpg', 'kitchen cabinets', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920'%}
+  </section> -->

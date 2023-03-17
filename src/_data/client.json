@@ -1,0 +1,16 @@
+{
+  "name": "Texas Medical Consultants",
+ 
+  "email": "newemail@gmail.com", 
+  "phone": "555-779-4407",
+  "phoneFormatted": "(555) 779-4407",
+  "address": {
+    "lineOne": "First Address Line",
+    "lineTwo": "Second Address Line, If Needed",
+    "city": "Dallas",
+    "county": "TX",
+    "postcode": "75093",
+    "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+  },
+  "domain": "www.website.com"
+}
