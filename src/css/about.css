@@ -1,4 +1,210 @@
 /*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #reviews {
+    /* Centers the button */
+    text-align: center;
+    padding: var(--sectionPadding);
+  }
+  #reviews .cs-container {
+    width: 100%;
+    max-width: 69rem;
+    margin: auto;
+  }
+  #reviews .cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  #reviews .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: center;
+    max-width: 43.75rem;
+    margin: 0 auto 1rem;
+    color: var(--headerColor);
+    position: relative;
+  }
+  #reviews .cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5rem;
+    text-align: center;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0 auto;
+    /* 88px - 104px */
+    margin-bottom: clamp(5.5em, 10.2vw, 6.5em);
+    color: #000;
+  }
+  #reviews .cs-card-group {
+    padding: 0;
+    /* 48px - 64px */
+    margin: 0 auto clamp(3rem, 5vw, 4rem);
+  }
+  #reviews .cs-item {
+    text-align: left;
+    list-style: none;
+    width: 100%;
+    max-width: 33.875rem;
+    margin: 0 auto 4rem;
+    /* Padding L & R - 16px - 32px */
+    padding: 3.75rem clamp(1rem, 3.2vw, 2rem) 0;
+    /* 32px - 40px */
+    padding-bottom: clamp(2rem, 5.4vw, 2.5rem);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 0.25rem;
+    background: #fff;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    /* Prevents padding from affecting height & width */
+    box-sizing: border-box;
+  }
+  #reviews .cs-item:last-of-type {
+    margin-bottom: 0;
+  }
+  #reviews .cs-item-img {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: -2.5rem;
+  }
+  #reviews .cs-item-p {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0 0 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #000;
+    border-bottom: 1px solid #E8E9EC;
+  }
+  #reviews .cs-reviewer {
+    font-size: 1rem;
+    line-height: 1.5em;
+    font-weight: 700;
+    width: 40%;
+    margin: 0 auto 0 0;
+    display: block;
+    color: var(--headerColor);
+  }
+  #reviews .cs-desc {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--label);
+    display: block;
+  }
+  #reviews .cs-item-stars {
+    width: 6rem;
+    height: 1rem;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48em) {
+  #reviews .cs-card-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  #reviews .cs-item {
+    /* reset margin so it won't interfere with flexbox */
+    margin: 0;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #reviews .cs-title,
+  body.dark-mode #reviews .cs-text,
+  body.dark-mode #reviews .cs-item-p,
+  body.dark-mode #reviews .cs-reviewer {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #reviews .cs-item {
+    background: #FC6268;
+  }
+  body.dark-mode #reviews .cs-desc {
+    color: var(--primaryLight);
+  }
+ .cs-buttons {
+    font-size: 1rem;
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    width: 11.25rem;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 0.5rem 1rem 0.5rem;
+    color: var(--headerColor);
+    padding: 0;
+    background-color:#ff444a;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color .3s;
+    border-radius: 12px;
+    cursor: pointer;
+    outline-offset: 4px;
+  }
+  .cs-buttons .front{
+    display: block;
+    padding-left: 0em;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background-color:#FC6268; 
+    color: white;
+    transform: translateY(-6px);
+  }
+  .cs-buttons:active .front {
+    transform: translateY(-2px);
+  }
+}
+/* Tablet */
+@media only screen and (min-width: 48em) {
+  #reviews {
+    padding-top: 9.375rem;
+    padding-bottom: 3.125rem;
+  }
+  #reviews .container {
+    font-size: min(1.4vw, 1em);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    column-gap: 1.875rem;
+  }
+  #reviews .review {
+    margin: 0;
+    margin-bottom: 9.375rem;
+  }
+  #reviews .review:last-of-type {
+    margin-bottom: 9.375rem;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #reviews .review {
+    background: #FC6268; 
+    
+  }
+  body.dark-mode #reviews .review .name {
+    color: #fff;
+  }
+  body.dark-mode #reviews .review .desc {
+    color: #fff;
+    opacity: .7;
+  }
+}
+
+
+/*-- -------------------------- -->
 <---       Side By Side         -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
