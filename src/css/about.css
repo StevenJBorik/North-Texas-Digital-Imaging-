@@ -86,7 +86,7 @@
     margin: 0 0 1.25rem;
     padding-bottom: 1.25rem;
     color: #000;
-    border-bottom: 1px solid #E8E9EC;
+    border-bottom: 1px solid #be9393;
   }
   #reviews .cs-reviewer {
     font-size: 1rem;
@@ -95,7 +95,7 @@
     width: 40%;
     margin: 0 auto 0 0;
     display: block;
-    color: var(--headerColor);
+    color:rgb(77, 3, 3);
   }
   #reviews .cs-desc {
     font-size: 0.875rem;
@@ -112,25 +112,31 @@
 @media only screen and (min-width: 48em) {
   #reviews .cs-card-group {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap; 
+    justify-content:space-between;
     align-items: center;
-    gap: 1rem;
+    gap: 3.5rem;
   }
   #reviews .cs-item {
     /* reset margin so it won't interfere with flexbox */
     margin: 0;
+    height: 400px;
+    width: 500px;
   }
 }
 /* Dark Mode */
 @media only screen and (min-width: 0em) {
-  body.dark-mode #reviews .cs-title,
+
   body.dark-mode #reviews .cs-text,
   body.dark-mode #reviews .cs-item-p,
   body.dark-mode #reviews .cs-reviewer {
-    color: var(--bodyTextColorWhite);
+    color: rgb(77, 3, 3);
+  }
+  body.dark-mode #reviews .cs-title {
+    color:#fff
   }
   body.dark-mode #reviews .cs-item {
-    background: #FC6268;
+    background: #fff;
   }
   body.dark-mode #reviews .cs-desc {
     color: var(--primaryLight);
@@ -382,14 +388,17 @@
     color: #fff;
   }
   body.dark-mode #sbs .cs-title,
-  body.dark-mode #sbs .cs-text,
+  body.dark-mode #sbs .cs-text {
+    color: #fff;
+  }
   body.dark-mode #sbs .cs-h3,
   body.dark-mode #sbs .cs-flex-p,
   body.dark-mode #sbs .cs-name {
-    color: var(--bodyTextColorWhite);
+    color: rgb(77, 3, 3);
   }
   body.dark-mode #sbs .cs-flex-group {
-    background-color:#FC6268;
+    background-color: #ffffff;
+    box-shadow: 0.3em 0.4em rgb(190, 147, 147);
   }
   body.dark-mode #sbs .cs-job {
     color: var(--bodyTextColorWhite);

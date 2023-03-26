@@ -186,7 +186,7 @@
     margin: 0 0.5rem 1rem 0.5rem;
     color: var(--headerColor);
     padding: 0;
-    background-color:#08590e;
+    background-color:#be9393;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -223,8 +223,8 @@
     padding: 0;
     border-radius: 12px;
     font-size: 1.25rem;
-    background-color:#2b8631; 
-    color: white;
+    background-color:#ffffff; 
+    color: #4d0303;
     transform: translateY(-6px);
   }
   #hero .cs-button-transparent:active .front {
@@ -292,7 +292,7 @@
     width: 90%;
     max-width: 82.5em;
     padding: 3.125em 1.25em;
-    border-top: 0.375em solid #DFDD67;
+    border-top: 0.375em solid rgb(190, 147, 147);
     /* box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05); */
     margin-bottom: -5.125em;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -365,15 +365,15 @@
 /* Dark mode */
 @media only screen and (min-width: 0em) {
   body.dark-mode #services {
-    background: #FC6268;
+    background: #fff;
   }
   body.dark-mode #services picture {
-    background:white;
+    background:rgb(190, 147, 147);
     width: 4.15em; 
     height: 4.15em;
   }
   body.dark-mode #services h2 {
-    color: #fff;
+    color: #4d0303;
     font-weight: bold;
   }
 }
@@ -428,7 +428,7 @@
     margin: 0 0.5rem 1rem 0.5rem;
     color: var(--headerColor);
     padding: 0;
-    background-color:#ff444a;
+    background-color:#be9393;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -442,8 +442,8 @@
     padding: 0;
     border-radius: 12px;
     font-size: 1.25rem;
-    background-color:#FC6268; 
-    color: white;
+    background-color:#ffffff; 
+    color: #4d0303;
     transform: translateY(-6px);
   }
   #servicesButton .cs-button-transparent:active .front {

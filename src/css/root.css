@@ -102,7 +102,7 @@
     margin: 0 0.5rem 1rem 0.5rem;
     color: var(--headerColor);
     padding: 0;
-    background-color:#ff444a;
+    background-color:#be9393;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -117,8 +117,8 @@
     padding-left: 2.3em;
     border-radius: 12px;
     font-size: 1.25rem;
-    background-color:#FC6268; 
-    color: white;
+    background-color:#ffffff; 
+    color: #4d0303;
     transform: translateY(-6px);
   }
 
@@ -550,7 +550,7 @@
   }
   body.dark-mode #navigation #navbar-menu ul li a:before {
     /* background: var(--accent); */
-    background: #cfab55;
+    background: #fff;
   }
 }
 /*-- -------------------------- -->
@@ -750,15 +750,15 @@
   }
   #footer .right-section .lists ul li a {
     text-decoration: none;
-    color: #fff;
+    color: rgb(77, 3, 3);
     line-height: 1.16666667em;
     transition: color .3s;
   }
   #footer .right-section .lists ul li a:hover {
-    color: var(--primary);
+    color: #be9393;
   }
   #footer .right-section .lists ul h2 {
-    color: #fff;
+    color: rgb(77, 3, 3);
     font-size: 1.125rem;
     line-height: 1.16666667em;
     margin-bottom: 2.3125rem;
@@ -772,7 +772,7 @@
     display: block;
     height: 0.125rem;
     width: 6.0625rem;
-    background: var(--primary);
+    background: #be9393;
     opacity: 1;
     bottom: -1rem;
     left: 0;
@@ -788,7 +788,7 @@
     width: 15.625rem;
   }
   #footer .credit {
-    color: #fff;
+    color: #4d0303;
     width: 96%;
     margin: auto;
     text-align: center;
@@ -797,7 +797,7 @@
     font-size: 1rem;
   }
   #footer .credit a {
-    color: var(--primary);
+    color: #be9393;
     text-decoration: none;
     font-size: 1rem;
   }
@@ -864,7 +864,7 @@
     display: block;
     height: 0.125rem;
     width: 0%;
-    background: var(--primary);
+    background: #be9393;
     opacity: 1;
     bottom: -0.1875rem;
     left: 0;
@@ -883,7 +883,7 @@
 /* Dark Mode */
 @media only screen and (min-width: 0em) {
   body.dark-mode #footer {
-    background: #FC6268;
+    background: #FFF;
 
   }
 }

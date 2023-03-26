@@ -172,13 +172,16 @@
   }
   body.dark-mode #sbs .cs-title,
   body.dark-mode #sbs .cs-text,
-  body.dark-mode #sbs .cs-h3,
-  body.dark-mode #sbs .cs-flex-p,
   body.dark-mode #sbs .cs-name {
     color: var(--bodyTextColorWhite);
   }
+  body.dark-mode #sbs .cs-flex-p
+  {
+    color: #4d0303;
+  }
   body.dark-mode #sbs .cs-flex-group {
-    background-color: #FC6268;
+    background-color: #ffffff;
+    box-shadow: .3em .4em rgb(190, 147, 147); 
   }
   body.dark-mode #sbs .cs-job {
     color: var(--bodyTextColorWhite);
@@ -186,6 +189,8 @@
   }
   body.dark-mode #sbs .cs-quote-icon {
     opacity: .2;
+    /* color: #4d0303;
+ */
   }
 }
 /*-- -------------------------- -->
@@ -387,7 +392,7 @@
     width: 90%;
     max-width: 82.5em;
     padding: 3.125em 1.25em;
-    border-top: 0.375em solid #DFDD67;
+    border-top: 0.375em solid #be9393;
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
     margin-bottom: 3.125em;
   }
@@ -586,18 +591,18 @@
 /* Dark mode */
 @media only screen and (min-width: 0em) {
   body.dark-mode #gallery {
-    background: #FC6268;
+    background: #fff;
     margin-top: 2.5em; 
   }
   body.dark-mode #gallery picture {
-    background:white;
+    background:#be9393;
     width: 4.15em; 
     height: 4.15em;
     /* border-radius: 5%; */
     text-align:center;
   }
   body.dark-mode #gallery h2 {
-    color: #fff;
+    color: #4d0303;
     font-weight: bold;
     text-align: center;
     margin-bottom: 1em;
@@ -739,13 +744,16 @@
 /* Dark Mode */
 @media only screen and (min-width: 0em) {
   body.dark-mode #reviews .cs-title,
-  body.dark-mode #reviews .cs-text,
+  body.dark-mode #reviews .cs-text
+  {
+    color: #fff;
+  }
   body.dark-mode #reviews .cs-item-p,
   body.dark-mode #reviews .cs-reviewer {
-    color: var(--bodyTextColorWhite);
+    color: rgb(77, 3, 3);
   }
   body.dark-mode #reviews .cs-item {
-    background: #FC6268;
+    background: #fff;
   }
   body.dark-mode #reviews .cs-desc {
     color: var(--primaryLight);
@@ -759,7 +767,7 @@
     margin: 0 0.5rem 1rem 0.5rem;
     color: var(--headerColor);
     padding: 0;
-    background-color:#ff444a;
+    background-color:#be9393;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -773,8 +781,8 @@
     padding-left: 0em;
     border-radius: 12px;
     font-size: 1.25rem;
-    background-color:#FC6268; 
-    color: white;
+    background-color:#ffffff; 
+    color: #4d0303;
     transform: translateY(-6px);
   }
   .cs-buttons:active .front {
