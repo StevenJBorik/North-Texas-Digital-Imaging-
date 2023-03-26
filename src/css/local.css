@@ -394,7 +394,7 @@
 
   .gallery .card picture {
     background: var(--primary);
-    width: 3.5em;
+    width: 3.55em;
     height: 3.55em;
     display: flex;
     justify-content: center;
@@ -404,9 +404,9 @@
     border-radius: 50%;
   }
   .gallery .card picture img {
-    width: 3em;
-    height: 3em;
-    border-radius: 50%;
+    width: 2.55em;
+    height: 2.55em;
+    border-radius: 5%;
   }
   #gallery .cs-topper {
     font-size: var(--topperFontSize);
@@ -424,11 +424,11 @@
     /* Centers the button */
     text-align: center;
     padding: 1em;
-    font-size: var(--headerFontSize);
-    font-weight: 900;
+    /* font-size: var(--headerFontSize); */
+    /* font-weight: 900; */
     line-height: 1.2em;
     max-width: 43.75rem;
-    margin: 0 auto 1rem;
+    margin: 0 auto -4rem;
     color: #000;
     position: relative;
   }
@@ -436,6 +436,18 @@
     width: 100%;
     max-width: 69rem;
     margin: auto;
+  }
+  #gallery-header .cs-text {
+    padding-top: 1.5rem;
+    font-size: 1rem;;
+    line-height: 1.5rem;
+    text-align: center;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0 auto;
+    /* 88px - 104px */
+    margin-bottom: clamp(5.5em, 10.2vw, 1.5em);
+    color:white;
   }
 
   /* .services .card h2 {
@@ -575,17 +587,20 @@
 @media only screen and (min-width: 0em) {
   body.dark-mode #gallery {
     background: #FC6268;
+    margin-top: 2.5em; 
   }
   body.dark-mode #gallery picture {
-    background:#5cbe86;
-    width: 3.75em; 
-    height: 3.75em;
+    background:white;
+    width: 4.15em; 
+    height: 4.15em;
+    /* border-radius: 5%; */
     text-align:center;
   }
   body.dark-mode #gallery h2 {
     color: #fff;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 1em;
   }
 
   body.dark-mode #gallery-header .cs-topper {

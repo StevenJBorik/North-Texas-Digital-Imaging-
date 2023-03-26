@@ -101,7 +101,7 @@
   }
   #hero .cs-title {
     /* 39px - 61px */
-    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+    font-size: clamp(2.4375rem, 6.4vw, 3.5125rem);
     font-weight: 900;
     line-height: 1.2em;
     text-align: center;
@@ -186,7 +186,7 @@
     margin: 0 0.5rem 1rem 0.5rem;
     color: var(--headerColor);
     padding: 0;
-    background-color:#ff444a;
+    background-color:#08590e;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -223,7 +223,7 @@
     padding: 0;
     border-radius: 12px;
     font-size: 1.25rem;
-    background-color:#FC6268; 
+    background-color:#2b8631; 
     color: white;
     transform: translateY(-6px);
   }
@@ -285,7 +285,7 @@
   .services {
     border-radius: 0.3125em;
     margin: auto;
-    margin-top: -10.4375em;
+    margin-top: -5.4375em;
     position: relative;
     z-index: 100;
     background: #fff;
@@ -294,7 +294,7 @@
     padding: 3.125em 1.25em;
     border-top: 0.375em solid #DFDD67;
     /* box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05); */
-    margin-bottom: 3.125em;
+    margin-bottom: -5.125em;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   }
   .services .card {
@@ -308,7 +308,7 @@
     margin-bottom: 0;
   }
   .services .card picture {
-    background: #5cbe86;
+    background-color: #5cbe86;
     width: 3.75em;
     height: 3.75em;
     display: flex;
@@ -321,11 +321,11 @@
   .services .card picture img {
     width: 3em;
     height: 3em;
-    border-radius: 50%;
+    border-radius: 5%;
   }
   .services .card h2 {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 1.35em;
     font-weight: 700;
     color: #1a1a1a;
@@ -368,12 +368,85 @@
     background: #FC6268;
   }
   body.dark-mode #services picture {
-    background:#5cbe86;
-    width: 3.75em; 
-    height: 3.75em;
+    background:white;
+    width: 4.15em; 
+    height: 4.15em;
   }
   body.dark-mode #services h2 {
     color: #fff;
     font-weight: bold;
+  }
+}
+
+/*-- -------------------------- -->
+<---           Services Button             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #servicesButton {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    /* Centers button */
+    text-align: center;
+    /* changes on tablet */
+    padding: 0 1rem;
+    padding-bottom: 0.25rem;
+    position: relative;
+    z-index: 1;
+    /* prevents overflow from the lines extending past the screen width */
+    overflow: hidden;
+  }
+  #servicesButton .cs-container {
+    width: 100%;
+    max-width: 80em;
+    /* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
+    /* 144px - 280px - leaving extra space for the navigation */
+    /* changes on tablet */
+    padding: clamp(9em, 25.95vw, -5.5em) 0;
+    margin: auto;
+    position: relative;
+  }
+  #servicesButton .cs-flex-group {
+    /* 60px - 220px */
+    margin-bottom: clamp(3.75em, 15.5vw, 1.75em);
+    margin: auto;
+    width: 80vw;
+    /* 464px - 562px */
+    max-width: clamp(29em, 60vw, 35.125em);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  #servicesButton .cs-button-transparent {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    width: 11.25rem;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 0.5rem 1rem 0.5rem;
+    color: var(--headerColor);
+    padding: 0;
+    background-color:#ff444a;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color .3s;
+    border-radius: 12px;
+    cursor: pointer;
+    outline-offset: 4px;
+  }
+  #servicesButton .cs-button-transparent .front {
+    display: block;
+    padding: 0;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background-color:#FC6268; 
+    color: white;
+    transform: translateY(-6px);
+  }
+  #servicesButton .cs-button-transparent:active .front {
+    transform: translateY(-2px);
   }
 }

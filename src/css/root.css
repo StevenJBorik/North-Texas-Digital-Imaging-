@@ -435,8 +435,10 @@
 
   }
   #navigation .logo img {
-    width: 100%;
-    height: 140%;
+    width: 70%;
+    height: 70%;
+    margin: 3rem;
+    padding: 1.3rem;
   }
   #navigation #navbar-menu ul {
     padding: 0;
@@ -500,7 +502,7 @@
 @media only screen and (max-width: 1023px) {
   body.dark-mode #navigation .background-color-div {
     /* background-color: var(--dark); */
-    background: linear-gradient(0.2turn, #428AF5, #FC6268, #DFDD67);
+    background: linear-gradient(0.2turn, #ffffff, #0f6d12, #911919);
 
   }
   body.dark-mode #navigation .hamburger-menu.clicked span {
@@ -536,8 +538,7 @@
 @media only screen and (min-width: 1024px) {
   body.dark-mode #navigation .background-color-div {
     /* background-color: var(--dark); */
-    background: linear-gradient(0.2turn, #428AF5, #FC6268, #DFDD67);
-  }
+    background: linear-gradient(.2turn, #ffffff, #f7eeee, #0b6e11);  }
   body.dark-mode #navigation .logo .light {
     display: block;
   }
@@ -545,12 +546,11 @@
     display: none !important;
   }
   body.dark-mode #navigation #navbar-menu ul li a {
-    color: #fff;
+    color: #4d0303;
   }
   body.dark-mode #navigation #navbar-menu ul li a:before {
     /* background: var(--accent); */
-    background: #5cbe86
-
+    background: #cfab55;
   }
 }
 /*-- -------------------------- -->
@@ -667,8 +667,8 @@
     /* display: block; */
     width: 100%; /* Make images fill the container width */
     height: auto; /* Keep the aspect ratio of images */
-    max-width: 85px; /* Set maximum width to the image's actual width */
-    max-height: 58px; /* Set maximum height to the image's actual height */
+    max-width: 70px; /* Set maximum width to the image's actual width */
+    max-height: 45px; /* Set maximum height to the image's actual height */
     display: inline-block; /* Make images display in a row */
     margin: 0.5rem 1.0em; /* Add margin to separate images */
   }
