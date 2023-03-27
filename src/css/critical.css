@@ -368,9 +368,12 @@
     background: #fff;
   }
   body.dark-mode #services picture {
-    background:rgb(190, 147, 147);
+    background:rgb(244, 244, 244);
     width: 4.15em; 
     height: 4.15em;
+    border-style: solid;
+    border-color: #4d0303;
+    padding: 2.5rem;
   }
   body.dark-mode #services h2 {
     color: #4d0303;

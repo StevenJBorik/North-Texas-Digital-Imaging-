@@ -595,11 +595,14 @@
     margin-top: 2.5em; 
   }
   body.dark-mode #gallery picture {
-    background:#be9393;
+    background:#fff;
     width: 4.15em; 
     height: 4.15em;
     /* border-radius: 5%; */
     text-align:center;
+    border-style: solid;
+    border-color: #4d0303;
+    padding: 2.5rem;
   }
   body.dark-mode #gallery h2 {
     color: #4d0303;

@@ -1,0 +1,109 @@
+---
+layout: 'base.html'
+description: "Meta description for the page"
+metaTitle: 'Title that shows up on google searches'
+tagTitle: 'Services'
+preloadCSS: '/css/services.css'
+permalink: 'services/'
+eleventyNavigation:
+    key: Services
+    order: 200
+---
+<section id="int-hero">
+    <h1 id="home-h">Our Services</h1>
+    {% image './src/images/ultrasound.jpg', 'reviews', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+  </section>
+
+  <section id="servicesPage">
+    <div class="cs-container">
+      <!-- <span class="cs-topper">Our Reviews</span> -->
+      <!-- <h2 class="cs-title">Our Staff & Radiologist</h2> -->
+      <!-- <p class="cs-text">
+        We've had many clients find success through our services. Here are some kind words from those we've worked with. 
+      </p> -->
+      <ul class="cs-card-group">
+        <!-- Review 1 -->
+        <li class="cs-item">
+          <span class="cs-reviewer">
+            MRI/MRA 1.5, Ultra Short Bore            <!-- <span class="cs-desc">Project Manager</span> -->
+          </span>
+          <div class="card">
+            <picture>
+              <img
+                aria-hidden="true"
+                decoding="async"
+                src="/assets/svgs/mri.png"
+                alt="appliance"
+                width="48"
+                height="48"
+              />
+          </div>
+          <p class="cs-item-p">
+            The MRI has a wide aperture, short bore design, virtually eliminates claustrophobia, while providing more comfort to our patients.
+          </p>
+        <!-- Review 2 -->
+        <li class="cs-item">
+          <span class="cs-reviewer">
+            X-rays
+            <!-- <span class="cs-desc">Project Manager</span> -->
+          </span>
+          <div class="card">
+            <picture>
+              <img
+                aria-hidden="true"
+                decoding="async"
+                src="/assets/svgs/ray.png"
+                alt="appliance"
+                width="48"
+                height="48"
+        />
+            </picture>
+         </div>
+          <p class="cs-item-p">
+            Early diagnosis is the key to preventing and treating illnesses such as broken bones and signs of cancer. By sending a small, carefully controlled amount of radiation through a certain part of your body, X-rays capture important images of the inside of your body.
+          </p>
+        </li>
+        <li class="cs-item">
+          <span class="cs-reviewer">
+            Ultrasound            <!-- <span class="cs-desc">Project Manager</span> -->
+          </span>
+         <div class="card">
+          <picture>
+            <img
+              aria-hidden="true"
+              decoding="async"
+              src="/assets/svgs/ultrsound.png"
+              alt="appliance"
+              width="48"
+              height="48"
+      />
+          </picture>
+        </div> 
+          <p class="cs-item-p">
+            Ultrasonography is a simple, safe, painless diagnostic procedure that bounces high-frequency sound waves off parts of the body and captures the returning “echoes” as images. There is no injection or radiation exposure associated with ultrasonography.
+        </li>
+        <li class="cs-item">
+            <span class="cs-reviewer">
+                DEXA/Bone Densitometry
+                <!-- <span class="cs-desc">Project Manager</span> -->
+            </span>
+          <div class="card">
+            <picture>
+                <img
+                  aria-hidden="true"
+                  decoding="async"
+                  src="/assets/svgs/bone-density.png"
+                  alt="appliance"
+                  width="48"
+                  height="48"
+          />
+              </picture>
+            </div>
+            <p class="cs-item-p">
+                Osteoporosis is treatable and preventable. Early diagnosis, therapeutic intervention and the use of bone density testing to diagnose and monitor response to therapy have greatly improved the prognosis for patients.
+            </p>
+          </li>
+      </ul>
+    </div>
+  </section>
+  
