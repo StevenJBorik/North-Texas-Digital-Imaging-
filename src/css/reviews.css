@@ -116,7 +116,7 @@
 @media only screen and (min-width: 0em) {
   #cta {
     position: relative;
-    padding: 3.125rem 0;
+    padding: 3.125rem 0;    
   }
   #cta:before {
     content: '';

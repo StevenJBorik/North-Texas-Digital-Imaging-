@@ -290,7 +290,7 @@
     top: 3.7rem;
     padding-top: 0;
     height: 0;
-    /* transition: height 0.3s, padding-top 0.3s, top 0.3s; */
+    transition: height 0.3s, padding-top 0.3s, top 0.3s;
   }
   #navigation #navbar-menu ul {
     padding: 0;
@@ -300,12 +300,12 @@
     list-style: none;
     margin-bottom: 1.5rem;
     text-align: center;
-    /* transform-style: preserve-3d; */
+    transform-style: preserve-3d;
     opacity: 0;
-    /* transform: translateY(-0.4375rem) rotateX(90deg);
-    transition: opacity .5s, transform .5s; */
+    transform: translateY(-0.4375rem) rotateX(90deg);
+    transition: opacity .5s, transform .5s;
   }
-  /* #navigation #navbar-menu ul li:nth-of-type(1) {
+  #navigation #navbar-menu ul li:nth-of-type(1) {
     transition-delay: .01s;
   }
   #navigation #navbar-menu ul li:nth-of-type(2) {
@@ -325,7 +325,7 @@
   } 
   #navigation #navbar-menu ul li:nth-of-type(7) {
     transition-delay: .07s;
-  } */
+  }
   #navigation #navbar-menu ul li a {
     text-decoration: none;
     text-transform: uppercase;
@@ -356,7 +356,7 @@
   }
   #navigation #navbar-menu.open ul li {
     opacity: 1;
-    /* transform: translateY(0) rotateX(0); */
+    transform: translateY(0) rotateX(0);
   }
 }
 /* Desktop */
@@ -502,7 +502,7 @@
 @media only screen and (max-width: 1023px) {
   body.dark-mode #navigation .background-color-div {
     /* background-color: var(--dark); */
-    background: linear-gradient(0.2turn, #ffffff, #0f6d12, #911919);
+    background: linear-gradient(.2turn, #ffffff, #f7eeee, #0b6e11); 
 
   }
   body.dark-mode #navigation .hamburger-menu.clicked span {
@@ -522,23 +522,24 @@
     display: none !important;
   }
   body.dark-mode #navigation #navbar-menu {
-    background-color: #FC6268;
+    background-color: #fff;
   }
   body.dark-mode #navigation #navbar-menu ul li a {
-    color: #fff;
+    color: #4d0303;
   }
   body.dark-mode #navigation #navbar-menu ul li a:before {
-    background: #5cbe86;
+    background: #be9393;
   }
   body.dark-mode #navigation #navbar-menu ul li a.active {
-    color: var(--primary);
+    color: #be9393;
   }
 }
 /* Dark Mode Desktop */
 @media only screen and (min-width: 1024px) {
   body.dark-mode #navigation .background-color-div {
     /* background-color: var(--dark); */
-    background: linear-gradient(.2turn, #ffffff, #f7eeee, #0b6e11);  }
+    background: linear-gradient(.2turn, #ffffff, #f7eeee, #0b6e11); 
+   }
   body.dark-mode #navigation .logo .light {
     display: block;
   }
@@ -670,7 +671,7 @@
     max-width: 70px; /* Set maximum width to the image's actual width */
     max-height: 45px; /* Set maximum height to the image's actual height */
     display: inline-block; /* Make images display in a row */
-    margin: .70rem 1.0em; /* Add margin to separate images */
+    margin: .75rem 1.0em; /* Add margin to separate images */
   }
 
   @media (min-width: 768px) {

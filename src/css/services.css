@@ -82,6 +82,21 @@
     }
   }
 
+@media only screen and (min-width: 0em) { 
+  #servicesPage {
+    padding-top: 3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  #servicesPage .cs-item {
+    /* reset margin so it won't interfere with flexbox */
+    margin: 0;
+    height: 400px;
+    width: 100px;
+  }
+}
+
+
 /* Tablet - 768px */
 @media only screen and (min-width: 48em) {
     #servicesPage .cs-card-group {
@@ -122,9 +137,12 @@
   /* Dark Mode */
   @media only screen and (min-width: 0em) {
   
-    body.dark-mode #servicesPage .cs-text,
     body.dark-mode #servicesPage .cs-item-p {
       color: rgb(77, 3, 3);
+    }
+    body.dark-mode #servicesPage .cs-text {
+      color: #fff;
+      margin-bottom: 3rem;
     }
 
     body.dark-mode #servicesPage .cs-reviewer {
@@ -142,7 +160,7 @@
  /* Tablet */
 @media only screen and (min-width: 48em) {
     #servicesPage {
-      padding-top: 9.375rem;
+      padding-top: 2.375rem;
       padding-bottom: 3.125rem;
     }
     #servicesPage .container {
