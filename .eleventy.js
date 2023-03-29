@@ -49,6 +49,26 @@ async function imageShortcode(src, alt, className, loading, sizes = '(max-width:
 }
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addCollection("navPages", function(collection) {
+    const navPages = collection.getAllSorted().filter(item => "eleventyNavigation" in item.data);
+
+    // Loop through all the navPages
+    for (let i = 0; i < navPages.length; i++) {
+      const navPage = navPages[i];
+      const navPageData = navPage.data.eleventyNavigation;
+
+      // If a navPage has children
+      if (navPageData.children) {
+        navPages[i].children = navPageData.children;
+        navPages[i].hasChildren = true;
+      }
+      else {
+        navPages[i].hasChildren = false;
+      }
+    }
+    return navPages;
+  });
+
   // adds the navigation plugin for easy navs
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
