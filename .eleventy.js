@@ -1,8 +1,10 @@
 // imports for the various eleventy plugins (navigation & image)
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const { DateTime } = require('luxon');
 const Image = require('@11ty/eleventy-img');
 const path = require('path');
+const util = require('util');
 
 // allows the use of {% image... %} to create responsive, optimised images
 // CHANGE DEFAULT MEDIA QUERIES AND WIDTHS
@@ -52,6 +54,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("navPages", function(collection) {
     const navPages = collection.getAllSorted().filter(item => "eleventyNavigation" in item.data);
 
+    console.log(navPages);
     // Loop through all the navPages
     for (let i = 0; i < navPages.length; i++) {
       const navPage = navPages[i];
@@ -71,6 +74,13 @@ module.exports = function (eleventyConfig) {
 
   // adds the navigation plugin for easy navs
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addFilter("to_json", function(value) {
+    return JSON.stringify(value);
+  });
+  eleventyConfig.addFilter('dump', obj => {
+    return util.inspect(obj)
+  });
 
   // allows css, assets, robots.txt and CMS config files to be passed into /public
   eleventyConfig.addPassthroughCopy('./src/css/**/*.css');
@@ -85,7 +95,7 @@ module.exports = function (eleventyConfig) {
     files: './public/css/**/*.css',
   });
 
-  // allows the {% image %} shortcode to be used for optimised iamges (in webp if possible)
+  // allows the {% image %} sheortcode to be used for optimised iamges (in webp if possible)
   eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
 
   // normally, 11ty will render dates on blog posts in full JSDate format (Fri Dec 02 18:00:00 GMT-0600). That's ugly

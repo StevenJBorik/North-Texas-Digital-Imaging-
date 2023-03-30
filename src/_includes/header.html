@@ -1,79 +1,8 @@
 <!-- ============================================ -->
 <!--                 Navigation                   -->
 <!-- ============================================ -->
-<!-- {% set navPages = collections.all | eleventyNavigation({ include: 'navigation' }) %} -->
+{% set navPages = collections.navPages %}
 
-
-
-<!-- <div id="navigation">
-    <div aria-hidden="true" class="background-color-div"></div>
-    <div class="container"> 
-        <a class="logo" aria-label="click to go to home page" href="/">
-            <img class="light" aria-hidden="true" src="/assets/images/logo.png" decoding="async" alt="logo">
-            <img class="dark" aria-hidden="true" src="/assets/images/logo-lll.png" decoding="async" loading="lazy" alt="logo" ">
-        </a>
-
-        <button class="hamburger-menu" aria-expanded="false" aria-controls="navbar-menu">
-            <span aria-hidden="true"></span>
-        </button>
-
-        <nav id="navbar-menu" aria-label="main navigation">
-            <ul class="menu">
-                {% for entry in navPages %}
-                    <li {% if entry.children %}class="dropdown"{% endif %}>
-                        <a class="menu-link{% if entry.url == page.url %} active{% endif %}" href="{{ entry.url }}">{{ entry.title }}</a>
-                        {% if entry.children %}
-                            <div class="dropdown-menu">
-                                <ul class="dropdown-menu-list">
-                                    {% for child in entry.children %}
-                                        <li><a href="{{ child.url }}" class="dropdown-menu-link">{{ child.title }}</a></li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        {% endif %}
-                    </li>
-                    {% if entry.children %}
-                        <style>
-                            li.dropdown:hover .dropdown-menu {
-                                display: block;
-                                position: absolute;
-                                z-index: 999;
-                            }
-                            .dropdown-menu {
-                                display: none;
-                                width: 200px;
-                                position: absolute;
-                                top: 100%;
-                                left: 0;
-                                background-color: #fff;
-                                border-radius: 3px;
-                                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-                                padding: 10px;
-                            }
-                            .dropdown-menu-list {
-                                list-style: none;
-                                margin: 0;
-                                padding: 0;
-                            }
-                            .dropdown-menu-link {
-                                color: #333;
-                                display: block;
-                                padding: 10px;
-                                text-decoration: none;
-                                transition: background-color 0.3s ease;
-                            }
-                            .dropdown-menu-link:hover {
-                                background-color: #f9f9f9;
-                            }
-                        </style>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        </nav>
-    </div>
-</div> -->
-
-{% set navPages = collections.all | eleventyNavigation %}
 
 <div id="navigation">
     <div aria-hidden="true" class="background-color-div"></div>
@@ -90,20 +19,22 @@
         <nav id="navbar-menu" aria-label="main navigation">
             <ul class="menu">
               {% for navItem in navPages %}
-                <li{% if navItem.url == page.url %} class="dropdown" {% endif %}>
-                    <a href="{{ navItem.url }}">{{ navItem.data.eleventyNavigation.key }}</a>
-                    {% if navItem.hasChildren %}
-                      <div class="dropdown-menu">
-                        <ul class="dropdown-menu-list">
-                            {% for child in navItem.children %}
-                                <li {% if child.url == page.url %} class="dropdown-menu-link" {% endif %}><a href="{{ child.url }}">{{ child.title }}</a></li>
-                            {% endfor %}
-                        </ul>
-                      </div>
-                    {% endif %}
-                </li>
+              <li{% if navItem.url == page.url %} class="dropdown" {% endif %}>
+                <a href="{{ navItem.url }}">{{ navItem.data.eleventyNavigation.key }}</a>
+                {% if navItem.hasChildren %}
+                <div class="dropdown-menu">
+                  <ul class="dropdown-menu-list">
+                    {% for child in navItem.children %}
+                    <li {% if child.url == page.url %} class="dropdown-menu-link" {% endif %}>
+                      <a href="{{ child.url }}">{{ child.title }}</a>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                {% endif %}
+              </li>
               {% endfor %}
             </ul>
-        </nav>
+          </nav>          
     </div>
 </div>

@@ -452,13 +452,13 @@
 
 #navbar-menu .menu li {
   list-style: none;
-  margin-left: 1.875rem;
+  margin-left: 1rem;
   padding-top: 0.1875rem;
   position: relative;
 }
 
 #navbar-menu .menu li.dropdown {
-  position: relative; 
+  position: relative;
   color: #4d0303;
 }
 
@@ -476,52 +476,84 @@
   display: none;
 }
 
-#navbar-menu .menu li.dropdown {
-  position: relative; 
-  color: #4d0303;
-}
-
-#navbar-menu .menu li.dropdown:hover .dropdown-menu {
+#navbar-menu .menu li.dropdown:hover > .dropdown-menu {
   display: block;
 }
 
-#navbar-menu .menu li.dropdown .dropdown-menu {
+.dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
+  /* align-items: center; */
   left: 0;
   background-color: #0008;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  /* justify-content: center; */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  width: 9.85rem;
 }
 
-#navbar-menu .menu li.dropdown .dropdown-menu-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-#navbar-menu .menu li.dropdown .dropdown-menu-link {
+.dropdown-menu a {
   display: block;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #333;
+  text-align: center;
+  margin: 0 auto;
 }
 
-#navbar-menu .menu li.dropdown .dropdown-menu-link:hover {
-  background-color: #eee;
+.dropdown-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* #navbar-menu .menu li {
-  display: inline-block;
-}  */
+.dropdown-menu-link {
+  width: 100%;
+  text-align: center;
+}
 
- #navbar-menu ul li a {
-  color: #4d0303;
+#navbar-menu .menu li:hover > .dropdown-menu {
+  display: block;
+  position: absolute;
 }
-#navbar-menu ul li a:before {
-  background: #4d0303;
+
+#navbar-menu .menu li.dropdown > a:hover {
+  color: #fff;
 }
+
+#navbar-menu .menu li.dropdown:hover > .dropdown-menu, .dropdown-menu:hover {
+  display: block;
+}
+
+#navbar-menu .menu li.dropdown:hover > a {
+  color: #fff; /* changes color of parent link on hover */
+  text-align: center;
+}
+
+#navbar-menu .menu li.dropdown > a { /* sets default color of parent link */
+  position: relative; /* adds relative position to parent link */
+  text-align: center;
+}
+
+#navbar-menu .menu li.dropdown > a::after {
+  content: ''; /* adds a pseudo-element to parent link */
+  display: block;
+  width: 0;
+  height: 2px;
+  /* background-color: #fff; */
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: width 0.3s ease-in-out; /* adds transition to pseudo-element */
+}
+
+#navbar-menu .menu li.dropdown:hover > a::after {
+  width: 100%; /* expands pseudo-element on hover */
+}
+
+#navbar-menu .menu li.dropdown.active > .dropdown-menu {
+  display: block;
+}
+
+
 }
 /* Dark Mode Mobile */
 @media only screen and (max-width: 1023px) {
@@ -551,6 +583,8 @@
   }
   body.dark-mode #navigation #navbar-menu ul li a {
     color: #4d0303;
+    justify-content: center;
+    text-align: center;
   }
   body.dark-mode #navigation #navbar-menu ul li a:before {
     background: #be9393;
@@ -558,7 +592,32 @@
   body.dark-mode #navigation #navbar-menu ul li a.active {
     color: #be9393;
   }
-
+  /* body.dark-mode #navbar-menu .menu li.dropdown:hover > .dropdown-menu {
+    display: block;
+  } */
+  
+  /* body.dark-mode #navbar-menu .menu li.dropdown:hover > .dropdown-menu > .dropdown-menu-list > .dropdown-menu-link {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display:block;
+  }
+  
+  body.dark-mode #navbar-menu .menu li.dropdown > .dropdown-menu > .dropdown-menu-list {
+    position: relative;
+  }
+  
+  body.dark-mode#navbar-menu .menu li.dropdown > .dropdown-menu > .dropdown-menu-list > .dropdown-menu-link {
+    display: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  body.dark-mode #navbar-menu .menu li.dropdown > .dropdown-menu .dropdown-menu-link:hover {
+    background-color: #eee;
+  } */
+  
   /* body.dark-mode #navigation #navbar-menu ul li.dropdown .dropdown-menu-wrapper {
     display: none;
     position: absolute;
@@ -584,10 +643,16 @@
   }
   body.dark-mode #navigation #navbar-menu ul li a {
     color: #4d0303;
+    /* justify-content: center;
+    display: block;
+    margin: 0 auto; */
   }
   body.dark-mode #navigation #navbar-menu ul li a:before {
     background: #4d0303;
   }
+
+  
+
 }
 /*-- -------------------------- -->
 <---   Interior Page Header     -->
