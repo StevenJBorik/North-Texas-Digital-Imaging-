@@ -51,29 +51,9 @@ async function imageShortcode(src, alt, className, loading, sizes = '(max-width:
 }
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addCollection("navPages", function(collection) {
-    const navPages = collection.getAllSorted().filter(item => "eleventyNavigation" in item.data);
-
-    console.log(navPages);
-    // Loop through all the navPages
-    for (let i = 0; i < navPages.length; i++) {
-      const navPage = navPages[i];
-      const navPageData = navPage.data.eleventyNavigation;
-
-      // If a navPage has children
-      if (navPageData.children) {
-        navPages[i].children = navPageData.children;
-        navPages[i].hasChildren = true;
-      }
-      else {
-        navPages[i].hasChildren = false;
-      }
-    }
-    return navPages;
-  });
 
   // adds the navigation plugin for easy navs
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  // eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addFilter("to_json", function(value) {
     return JSON.stringify(value);
@@ -103,10 +83,6 @@ module.exports = function (eleventyConfig) {
 
   // normally, 11ty will render dates on blog posts in full JSDate format (Fri Dec 02 18:00:00 GMT-0600). That's ugly
   // this filter allows dates to be converted into a normal, locale format. view the docs to learn more (https://moment.github.io/luxon/api-docs/index.html#datetime)
-  eleventyConfig.addFilter('postDate', (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
-  });
-
   return {
     dir: {
       input: 'src',
