@@ -78,6 +78,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("to_json", function(value) {
     return JSON.stringify(value);
   });
+  eleventyConfig.addFilter("contains", function(arr, str) {
+    return arr.includes(str);
+  });
   eleventyConfig.addFilter('dump', obj => {
     return util.inspect(obj)
   });
