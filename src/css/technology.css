@@ -1,0 +1,74 @@
+.cs-text {
+    color: #fff;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
+  }
+
+  .tech-img-1 {
+    background-image: url('../images/philips.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .tech-img-2 {
+    background-image: url('../images/xma.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .tech-img-3 {
+    background-image: url('/src/images/siemens.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .tech-img-4 {
+    background-image: url('../images/hologic.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+ 
+  
