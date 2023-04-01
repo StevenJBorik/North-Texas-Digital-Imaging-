@@ -12,28 +12,56 @@ permalink: 'Technology/'
     <h1 id="home-h">Our Technology</h1>
     {% image './src/images/technology.jpg', 'reviews', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px' %}
 </section>
-
-  <section id="technologyPage">
-    <div class="cs-container">
-      <!-- <span class="cs-topper">Our Reviews</span> -->
-      <!-- <h2 class="cs-title">Our Staff & Radiologist</h2> -->
-      <!-- <p class="cs-text">
-        We've had many clients find success through our services. Here are some kind words from those we've worked with. 
-      </p> -->
-      <p class="cs-text">North Texas Digital Imaging provides access to modern technology for the physicians and the patients. The physicians can view the patient images via the internet after their patients have completed their scans. The patients can be assured of our commitment to offering the latest digital technology.</p>
-  
-      <div class="technology-list">
-        <!-- <h2 class="technology-title">Our Technologies</h2> -->
-        <ul class="technology-items">
-          <li class="technology-item">
-            <h4 class="technology-name">Hologic QDR 4500 Bone Densitometer</h4>
-            <div class="tech-img-4"></div>
-            {% set image_src = './src/images/hologic.jpg' %}
-            {% set image_config = { 'class': 'reviews', 'loading': 'lazy' } %}
-            <div class="tech-img-hover" style="background-image: url('{% image image_src, image_config %}')"></div>
-            <p class="technology-description">Hologic QDR-4500c has the combination of the superiority of fan-beam technology with a unique, value-added package of clinical, patient reporting, and support software. Hologic QDR-4500c uses a user-friendly operating system that provides step-by-step instructions through the examination process with accurate results at the push of a button. The unit is nearly five times faster than the time it takes to produce similar, clinically-meaningful scans than the fastest pencil-beam system. This fast scanning method allows you to contribute to your potential for practice growth and can accommodate more patients in your busy schedule.</p>
-          </li>
-        </ul>
+<section id="technologyPage">
+  <div class="technologyIntro cs-container">
+    <h7 class="cs-text2">North Texas Digital Imaging provides access to modern technology for the physicians and the patients. The physicians can view the patient images via the internet after their patients have completed their scans. The patients can be assured of our commitment to offering the latest digital technology. Please take a moment to look below and learn more about our systems.</h7>
+  </div>
+  <div class="cs-container">
+    <div class="technology-list">
+      <div class="technology-item">
+        <div class="tech-img">
+          {% set image_src = './src/images/hologic.jpg' %}
+          {% set image_config = { 'class': 'tech-img-src', 'loading': 'lazy' } %}
+          {% image image_src, image_config %}
+        </div>              
+        <div class="technology-details">
+          <h4 class="technology-name">Hologic QDR 4500 Bone Densitometer</h4>
+          <p class="technology-description">Hologic QDR-4500c has the combination of the superiority of fan-beam technology with a unique, value-added package of clinical, patient reporting, and support software. Hologic QDR-4500c uses a user-friendly operating system that provides step-by-step instructions through the examination process with accurate results at the push of a button. The unit is nearly five times faster than the time it takes to produce similar, clinically-meaningful scans than the fastest pencil-beam system. This fast scanning method allows you to contribute to your potential for practice growth and can accommodate more patients in your busy schedule.</p>
+        </div>
+      </div>
+      <div class="technology-item">
+        <div class="tech-img">
+          {% set image_src = './src/images/xma.jpg' %}
+          {% set image_config = { 'class': 'tech-img-src', 'loading': 'lazy' } %}
+          {% image image_src, image_config %}
+        </div>              
+        <div class="technology-details">
+          <h4 class="technology-name">XMA X-ray</h4>
+          <p class="technology-description">Fixed-height pedestal table features a four-way floating tabletop, and front- and rear-positioning foot pedal controls for easy patient positioning and technologist accessibility. Overhead tube support can be rotated for decubitus, off-table and upright radiography, as well as stretcher cases. Available in 32, 50, 65, 80, 100, 200kW the high-frequency generator provides penetration for nearly any application.</p>
+        </div>
+      </div>
+      <div class="technology-item">
+        <div class="tech-img">
+          {% set image_src = './src/images/siemens.jpg' %}
+          {% set image_config = { 'class': 'tech-img-src', 'loading': 'lazy' } %}
+          {% image image_src, image_config %}
+        </div>              
+        <div class="technology-details">
+          <h4 class="technology-name">Siemens Acuson Ultrasound</h4>
+          <p class="technology-description">The Aspen is the result of selected Acuson Siemens Sequoia technologies and other Acuson technologies combined to form a whole new ultrasound imaging platform. , The Acuson Aspen has dual linear connection capabilities and Native Tissue Harmonic Imaging (NTHI). With applications in vascular, obstetrical, cardiac, and small parts.</p>
+        </div>
+      </div>
+      <div class="technology-item">
+        <div class="tech-img">
+          {% set image_src = './src/images/philips.jpg' %}
+          {% set image_config = { 'class': 'tech-img-src', 'loading': 'lazy' } %}
+          {% image image_src, image_config %}
+        </div>              
+        <div class="technology-details">
+          <h4 class="technology-name">Philips Infinion 1.5T Ultra Short Bore MRI</h4>
+          <p class="technology-description">The Philips Infinion 1.5T MRI machine is an ultra-short, open scanner with a dockable patient couch. The Philips Infinion 1.5T MRI is designed for feet-first entry so the patient's head can remain outside the magnet for the majority of exams. Equipped with a flared gradient coil that enhances patient aperture, the Philips Infinion 1.5T MRI combines a Synergy Integrated Spine Array coil for simplified patient setup with a Synergy Multi-Mode RF coil selection that will enable simultaneous connections of up to 20 coil elements.</p>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
