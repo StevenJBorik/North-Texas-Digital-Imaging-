@@ -144,8 +144,9 @@
       color: #fff;
       margin-top: 1rem;
       margin-bottom: 3rem;
-      padding-left: 7.5rem;
-      padding-right: 7.5rem;
+      /* padding-left: 7.5rem;
+      padding-right: 7.5rem; */
+      text-align: center;
     }
 
     body.dark-mode #servicesPage .cs-reviewer {
