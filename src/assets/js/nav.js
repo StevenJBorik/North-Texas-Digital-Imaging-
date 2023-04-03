@@ -7,6 +7,7 @@ const hamburgerMenu = document.querySelector("#navigation .hamburger-menu");
 hamburgerMenu.addEventListener('click', function() {
     const isNavOpen = navbarMenu.classList.contains("open");
     if (!isNavOpen) {
+        console.log(isNavOpen)
         hamburgerMenu.setAttribute("aria-expanded", true);
         hamburgerMenu.classList.add("clicked");
         navbarMenu.classList.add("open");

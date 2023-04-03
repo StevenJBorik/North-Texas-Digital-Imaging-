@@ -220,13 +220,14 @@
     border: none;
     height: 3rem;
     width: 3rem;
-    z-index: 100;
+    z-index: 10000;
     display: block;
     background: transparent;
     padding: 0;
     top: 50%;
     transform: translateY(-50%);
     transition: top .3s;
+    background-color: #000;
   }
   #navigation .hamburger-menu span {
     height: 2px;
@@ -283,7 +284,7 @@
     padding: 0;
     width: 100%;
     border-radius: 0 0 0.375em 0.375em;
-    z-index: -1;
+    z-index: 10;
     overflow: hidden;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     background-color: #fff;
@@ -622,6 +623,7 @@
   }
   body.dark-mode #navigation #navbar-menu {
     background-color: #fff;
+    z-index: 10;
   }
   body.dark-mode #navigation #navbar-menu ul li a {
     color: #4d0303;
