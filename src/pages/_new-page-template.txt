@@ -12,3 +12,149 @@ eleventyNavigation:
 ---
 
 <!-- Enter html code below -->
+
+
+ #navigation .hamburger-menu {
+    position: absolute;
+    right: 0rem;
+    border: none;
+    height: 3rem;
+    width: 3rem;
+    z-index: 100;
+    display: block;
+    background: transparent;
+    padding: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: top .3s;
+  }
+  #navigation .hamburger-menu span {
+    height: 2px;
+    width: 1.875rem;
+    background-color: #000;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color 0.3s;
+  }
+  #navigation .hamburger-menu span:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 80%;
+    background: #000;
+    opacity: 1;
+    top: -6px;
+    left: 0;
+    transition: width .3s, left .3s, top .3s, transform .5s;
+  }
+  #navigation .hamburger-menu span:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 80%;
+    background: #000;
+    opacity: 1;
+    top: 6px;
+    left: 0;
+    transition: width .3s, left .3s, top .3s, transform .3s;
+  }
+  #navigation .hamburger-menu.clicked span {
+    background-color: transparent;
+  }
+  #navigation .hamburger-menu.clicked span:before {
+    width: 100%;
+    transform: translate(-50%, -50%) rotate(225deg);
+    left: 50%;
+    top: 50%;
+  }
+  #navigation .hamburger-menu.clicked span:after {
+    width: 100%;
+    transform: translate(-50%, -50%) rotate(-225deg);
+    left: 50%;
+    top: 50%;
+  }
+  #navigation #navbar-menu {
+    position: fixed;
+    right: 0;
+    padding: 0;
+    width: 100%;
+    border-radius: 0 0 0.375em 0.375em;
+    z-index: 100000;
+    overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: #fff;
+    top: 3.7rem;
+    padding-top: 0;
+    height: 0;
+    transition: height 0.3s, padding-top 0.3s, top 0.3s;
+  }
+  #navigation #navbar-menu ul {
+    padding: 0;
+    perspective: 700px;
+  }
+  #navigation #navbar-menu ul li {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    transform-style: preserve-3d;
+    opacity: 0;
+    transform: translateY(-0.4375rem) rotateX(90deg);
+    transition: opacity .5s, transform .5s;
+  }
+  #navigation #navbar-menu ul li:nth-of-type(1) {
+    transition-delay: .01s;
+  }
+  #navigation #navbar-menu ul li:nth-of-type(2) {
+    transition-delay: .02s;
+  }
+  #navigation #navbar-menu ul li:nth-of-type(3) {
+    transition-delay: .03s;
+  }
+  #navigation #navbar-menu ul li:nth-of-type(4) {
+    transition-delay: .04s;
+  }
+  #navigation #navbar-menu ul li:nth-of-type(5) {
+    transition-delay: .05s;
+  }
+  #navigation #navbar-menu ul li:nth-of-type(6) {
+    transition-delay: .06s;
+  }
+  #navigation #navbar-menu ul li:nth-of-type(7) {
+    transition-delay: .07s;
+  }
+  #navigation #navbar-menu ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 1.1875rem;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+  }
+  #navigation #navbar-menu ul li a.active:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 0.5rem;
+    background: var(--primary);
+    opacity: 1;
+    bottom: 5rem;
+    border-radius: 0.25rem;
+    left: -0.375rem;
+    right: -0.375rem;
+    z-index: -1;
+  }
+  #navigation #navbar-menu.open {
+    height: 22.25rem;
+    padding-top: 1.25rem;
+    z-index: 100;
+  }
+  #navigation #navbar-menu.open ul li {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }

@@ -62,6 +62,7 @@
         </title>
 
         </script>
+
         <!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> -->
         <!-- <script src="../assets/js/app.js"></script>
         <script src="../assets/js/form.js"></script> -->
@@ -74,7 +75,8 @@
         <main id="main">{{ content | safe }}</main>
         {% include "footer.html" %}
 
-        <script defer src="/assets/js/nav.js"></script>
+        <script defer src="../assets/js/nav.js"></script>
+        <script defer src="../assets/js/ham.js"></script>
         <script defer src="/assets/js/dark.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <!-- <script type="text/javascript" src="/src/backend/form.js"></script>  -->
@@ -99,14 +101,5 @@
                 }
             });
         </script>
-        <!-- <script>
-            const hamburgerMenu = document.querySelector('.hamburger-menu');
-            const navbarMenu = document.querySelector('#navbar-menu');
-
-            hamburgerMenu.addEventListener('click', () => {
-            hamburgerMenu.classList.toggle('clicked');
-            navbarMenu.classList.toggle('open');
-            });
-        </script> -->
     </body>
 </html>

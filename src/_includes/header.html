@@ -3,35 +3,40 @@
 <!--                 Navigation                   -->
 <!-- ============================================ -->
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+  <body>
+    <div id="navigation">
+      <div aria-hidden="true" class="background-color-div"></div>
+      <div class="container"> 
+          <a class="logo" aria-label="click to go to home page" href="/">
+              <img class="light" aria-hidden="true" src="/assets/images/logo.png" decoding="async" alt="logo">
+              <img class="dark" aria-hidden="true" src="/assets/images/logo-lll.png" decoding="async" loading="lazy" alt="logo">
+          </a>
 
-<div id="navigation">
-    <div aria-hidden="true" class="background-color-div"></div>
-    <div class="container"> 
-        <a class="logo" aria-label="click to go to home page" href="/">
-            <img class="light" aria-hidden="true" src="/assets/images/logo.png" decoding="async" alt="logo">
-            <img class="dark" aria-hidden="true" src="/assets/images/logo-lll.png" decoding="async" loading="lazy" alt="logo">
-        </a>
-
-        <button class="hamburger-menu" aria-expanded="false" aria-controls="navbar-menu">
+          <button class="hamburger-menu" aria-expanded="false" aria-controls="navbar-menu">
             <span aria-hidden="true"></span>
-        </button>
+          </button>
 
-        <nav id="navbar-menu" aria-label="main navigation">
-          <ul class="menu">
-            <li {% if page.url == '/' %}class="active"{% endif %}><a class="nav-link" href="/">Home</a></li>
-            <li {% if page.url == '/about.html' %}class="active"{% endif %}><a class="nav-link" href="/about">About Us</a></li>
-            <li {% if page.url == '/services.html' %}class="active"{% endif %}><a class="nav-link" href="/services">Services</a></li>
-            <li {% if page.url == '/technology.html' %}class="active"{% endif %}><a class="nav-link" href="/technology">Technology</a></li>
-            <li class="dropdown">
-              <a class="nav-link dropdown-toggle {% if page.url | contains('/personal-injury/') %}active{% endif %}" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Personal Injury</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item {% if page.url == '/attorneys.html' %}active{% endif %}" href="/attorneys">Attorneys</a>
-                <a class="dropdown-item {% if page.url == '/doctors.html' %}active{% endif %}" href="/doctors">Doctors</a>
-              </div>
-            </li>
-            <li {% if page.url == '/contact.html' %}class="active"{% endif %}><a class="nav-link" href="/contact">Contact</a></li>
-          </ul>
-        </nav>
+          <nav id="navbar-menu" aria-label="main navigation">
+            <ul class="menu">
+              <li {% if page.url == '/' %}class="active"{% endif %}><a class="nav-link" href="/">Home</a></li>
+              <li {% if page.url == '/about.html' %}class="active"{% endif %}><a class="nav-link" href="/about">About Us</a></li>
+              <li {% if page.url == '/services.html' %}class="active"{% endif %}><a class="nav-link" href="/services">Services</a></li>
+              <li {% if page.url == '/technology.html' %}class="active"{% endif %}><a class="nav-link" href="/technology">Technology</a></li>
+              <li class="dropdown">
+                <a class="nav-link dropdown-toggle {% if page.url | contains('/personal-injury/') %}active{% endif %}" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Personal Injury</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item {% if page.url == '/attorneys.html' %}active{% endif %}" href="/attorneys">Attorneys</a>
+                  <a class="dropdown-item {% if page.url == '/doctors.html' %}active{% endif %}" href="/doctors">Doctors</a>
+                </div>
+              </li>
+              <li {% if page.url == '/contact.html' %}class="active"{% endif %}><a class="nav-link" href="/contact">Contact</a></li>
+            </ul>
+          </nav>
+      </div>
     </div>
-</div>
-
+  </body>
+</html>

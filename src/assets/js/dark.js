@@ -35,8 +35,8 @@ function detectColourScheme() {
 // run on page load
 detectColourScheme();
 
-// add event listener to the dark mode button toggle
-document.getElementById('dark-mode-toggle').addEventListener('click', () => {
-  // on click, check localstorage for the dark mode value, use to apply the opposite of what's saved
-  localStorage.getItem('theme') === 'light' ? enableDarkMode() : disableDarkMode();
-});
+// // add event listener to the dark mode button toggle
+// document.getElementById('dark-mode-toggle').addEventListener('click', () => {
+//   // on click, check localstorage for the dark mode value, use to apply the opposite of what's saved
+//   localStorage.getItem('theme') === 'light' ? enableDarkMode() : disableDarkMode();
+// });
