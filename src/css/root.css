@@ -806,8 +806,22 @@
     /* display: block; */
     width: 100%; /* Make images fill the container width */
     height: auto; /* Keep the aspect ratio of images */
-    max-width: 70px; /* Set maximum width to the image's actual width */
-    max-height: 45px; /* Set maximum height to the image's actual height */
+    max-width: 65px; /* Set maximum width to the image's actual width */
+    max-height: 85px; /* Set maximum height to the image's actual height */
+    display: inline-block; /* Make images display in a row */
+    margin: .75rem 1.0em; /* Add margin to separate images */
+    padding-bottom: .2rem;
+  }
+
+  #footer .left-section .cert img {
+    /* width: 15%; 
+    height: 20%; 
+    margin-left: 2em;  */
+    /* display: block; */
+    width: 100%; /* Make images fill the container width */
+    height: auto; /* Keep the aspect ratio of images */
+    max-width: 85px; /* Set maximum width to the image's actual width */
+    max-height: 89px; /* Set maximum height to the image's actual height */
     display: inline-block; /* Make images display in a row */
     margin: .75rem 1.0em; /* Add margin to separate images */
   }
