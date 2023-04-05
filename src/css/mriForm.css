@@ -1,0 +1,37 @@
+#main-pdf .cs-container {
+  width: 100%;
+  max-width: 80rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 2.5rem;
+  overflow-y: scroll;
+}
+
+button#save-button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+iframe {
+  padding-top: 6.1rem; 
+}
+
+@media screen and (max-width: 767px) {
+  #main-pdf .cs-container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  
+  iframe {
+    padding-top: 4.5rem;
+  }
+}

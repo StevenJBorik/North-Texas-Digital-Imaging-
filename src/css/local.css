@@ -102,7 +102,7 @@
   #sbs .cs-flex-group {
     /* 16px - 32px */
     padding: clamp(1rem, 3vw, 2rem);
-    background-color: #FC6268;
+    /* background-color: #FC6268; */
     border-radius: 1rem;
     position: relative;
   }

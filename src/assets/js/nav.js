@@ -9,7 +9,7 @@ const hamburgerMenu = document.querySelector("#navigation .hamburger-menu");
 
 // Get the current URL path
 var url = window.location.pathname;
-console.log(url); 
+
 
 
 hamburgerMenu.addEventListener('click', function() {

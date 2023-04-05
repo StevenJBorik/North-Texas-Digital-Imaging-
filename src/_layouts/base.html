@@ -34,7 +34,7 @@
         <meta name="theme-color" content="#ffffff">
 
         <!-- Preload -->
-        <link rel="preload" as="image" href="/assets/logo-light.png">
+        <!-- <link rel="preload" as="image" href="/assets/logo-light.png"> -->
         <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
         <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>
 
@@ -46,6 +46,8 @@
         <!-- Loading in page specific CSS sheets from css block -->
         <link rel="stylesheet" href="/css/critical.css"/>
         <link rel="stylesheet" href="{{ preloadCSS }}">
+        <link rel="stylesheet" href="../css/annotator.min.css">
+
 
         <!-- <script src="https://unpkg.com/pdf-lib@1.11.0"></script>
         <script src="https://unpkg.com/downloadjs@1.4.7"></script> -->
@@ -61,15 +63,13 @@
             {% endif %}
         </title>
 
-        </script>
-
+        <!-- </script> -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://apis.google.com/js/api.js"></script>   
+        <script src="../assets/js/api.js"></script>
         <!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> -->
         <!-- <script src="../assets/js/app.js"></script>
         <script src="../assets/js/form.js"></script> -->
-        <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
-        <script src="https://mozilla.github.io/pdf.js/build/pdf.worker.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-annotate.js/3.0.3/pdf-annotate.min.js"></script>
-
     </head>
     <body>
         <!--Screen reader skip main nav-->
@@ -80,9 +80,8 @@
         {% include "footer.html" %}
 
         <script defer src="../assets/js/nav.js"></script>
-        <script defer src="../assets/js/ham.js"></script>
-        <script defer src="/assets/js/dark.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script defer src="../assets/js/dark.js"></script>
+
         <!-- <script type="text/javascript" src="/src/backend/form.js"></script>  -->
         <!--
         This script adds a class to the body after scrolling 100px
