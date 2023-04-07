@@ -1,4 +1,5 @@
-const { GoogleAuth } = require('google-auth-library')
+const { GoogleAuth } = window.google.auth;
+
 
 let gdriveApiLoaded = false;
 const CLIENT_ID = '830042434681-96p23o3fm7to4vejl103d2hr5oi2s38f.apps.googleusercontent.com';
@@ -84,7 +85,7 @@ async function copyAndDisplayFile() {
 
   try {
     // Create a new instance of GoogleAuth
-    const auth = await new google.auth.GoogleAuth({
+    const auth = await new GoogleAuth({
       clientId: CLIENT_ID,
       scopes: ['https://www.googleapis.com/auth/drive.file'] // or no file
     });
