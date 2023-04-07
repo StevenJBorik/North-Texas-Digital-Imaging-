@@ -1,4 +1,3 @@
-const { GoogleAuth } = window.google.auth;
 
 
 let gdriveApiLoaded = false;
@@ -26,6 +25,7 @@ function loadGDriveApi() {
       gapi.load('client:auth2', () => {
         gapi.client.init({
           clientId: CLIENT_ID,
+          key:'AIzaSyBU9xNLl6-KMOtcOrjQ0rf6B9uxnN5w31A',
           discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest'],
           scope: 'https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive.install',
           redirectUri: REDIRECT_URI
@@ -36,6 +36,12 @@ function loadGDriveApi() {
         }).catch((error) => {
           console.error('Error initializing Google API client:', error);
           reject(error);
+        });
+      
+        gapi.auth2.init({
+          client_id: CLIENT_ID,
+          scope: 'https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive.install',
+          redirect_uri: REDIRECT_URI
         });
       });
     };
@@ -87,7 +93,8 @@ async function copyAndDisplayFile() {
     // Create a new instance of GoogleAuth
     const auth = await new GoogleAuth({
       clientId: CLIENT_ID,
-      scopes: ['https://www.googleapis.com/auth/drive.file'] // or no file
+      scope: 'https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive.install',
+      // or no file
     });
 
     // Get authorization from the user
