@@ -35,6 +35,7 @@
     "@submitty/pdf-annotate.js": "^2.5.1",
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "gapi-script": "^1.2.0",
     "google-auth-library": "^8.7.0",
     "googleapis": "^114.0.0",
     "pdf-annotate.js": "^1.0.0",

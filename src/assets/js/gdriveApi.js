@@ -1,51 +1,49 @@
 
 
-let gdriveApiLoaded = false;
-const CLIENT_ID = '830042434681-96p23o3fm7to4vejl103d2hr5oi2s38f.apps.googleusercontent.com';
+// let gdriveApiLoaded = false;
+const CLIENT_ID = '830042434681-1o28e5ibcbk1k8hbumlh39rfah7a576s.apps.googleusercontent.com';
 const REDIRECT_URI = 'http://localhost:8080/mriForm';
 const FILE_ID = '1tkW2QEB_CVLz0iJqR3iKn6BKnY6AHfUO2VuDkvZegHk';
 const IFRAME_ID = 'pdf-iframe';
 const PARENT_FOLDER_ID = '10XCaaS_hQrXJR21frN9kmqTVIfxYtOLf';
+const CLIENT_SECRET = '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';
+const API_KEY = 'AIzaSyBU9xNLl6-KMOtcOrjQ0rf6B9uxnN5w31A';
+
+
+// const cors = require('cors')
+// const allowedOrigins = ['https://accounts.google.com', 'https://www.googleapis.com']
+// const corsOptions = {
+//   origin: function (origin, callback) {
+//     if (allowedOrigins.includes(origin)) {
+//       callback(null, true)
+//     } else {
+//       callback(new Error('Not allowed by CORS'))
+//     }
+//   }
+// }
+// app.use(cors(corsOptions))
+
 
 
 function loadGDriveApi() {
-  console.log('Loading GDrive API...');
-
-  return new Promise((resolve, reject) => {
-    // Load the Google API client library asynchronously
-    const script = document.createElement('script');
-    script.src = 'https://apis.google.com/js/api.js';
-    document.body.appendChild(script);
-
-    // Listen for the API library to load
-    script.onload = () => {
-      console.log('Google API client library loaded.');
+    console.log('Loading GDrive API...');
 
       // Initialize the Google API client with your OAuth 2.0 client ID and API key
-      gapi.load('client:auth2', () => {
-        gapi.client.init({
-          clientId: CLIENT_ID,
-          key:'AIzaSyBU9xNLl6-KMOtcOrjQ0rf6B9uxnN5w31A',
-          discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest'],
-          scope: 'https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive.install',
-          redirectUri: REDIRECT_URI
-        }).then(() => {
-          console.log('Google API client initialized.');
-          gdriveApiLoaded = true;
-          resolve();
-        }).catch((error) => {
-          console.error('Error initializing Google API client:', error);
-          reject(error);
-        });
-      
-        gapi.auth2.init({
-          client_id: CLIENT_ID,
-          scope: 'https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive.install',
-          redirect_uri: REDIRECT_URI
-        });
-      });
-    };
-  });
+    gapi.client.init({
+      clientId: CLIENT_ID,
+      apiKey: API_KEY,
+      discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest'],
+      scope: 'https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/docs https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive.install',
+      redirectUri: REDIRECT_URI
+    })
+      console.log('Google API client initialized.');
+      // gdriveApiLoaded = true;
+    // gapi.auth2.init({
+    //   client_id: CLIENT_ID,
+    //   scope: 'https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/docs https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive.install',
+    //   redirect_uri: REDIRECT_URI
+    // });
+  
 }
 
 async function displayFileInIframe(fileId) {
@@ -81,27 +79,20 @@ function getIframeContentUrl(fileId) {
   });
 }
 
-async function copyAndDisplayFile() {
+async function copyAndDisplayFile(accessToken) {
   console.log('Inside copyAndDisplayFile function');
 
-  if (!gdriveApiLoaded) {
-    console.error('GDrive API not loaded.');
-    return;
-  }
+  // if (!gdriveApiLoaded) {
+  //   console.error('GDrive API not loaded.');
+  //   return;
+  // }
+  gapi.client.setToken({
+    access_token: accessToken
+  });
 
   try {
-    // Create a new instance of GoogleAuth
-    const auth = await new GoogleAuth({
-      clientId: CLIENT_ID,
-      scope: 'https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive.install',
-      // or no file
-    });
-
-    // Get authorization from the user
-    const {tokens} = await auth.getClient();
-
     // Set the access token for the Google API client
-    gapi.auth.setToken(tokens);
+ 
 
     // Copy the file
     const response = await gapi.client.drive.files.copy({
@@ -122,25 +113,68 @@ async function copyAndDisplayFile() {
 }
 
 
+
+
+
 function init() {
   console.log('Initializing...');
 
   // Load the Google Drive API
-  loadGDriveApi().then(() => {
-    console.log('Google Drive API loaded.');
 
-    // Add event listener to the copy button
-    const copyButton = document.getElementById('auth-button');
-    copyButton.addEventListener('click', copyAndDisplayFile);
+  console.log('Google Drive API loaded.');
+   
+  // }).catch((error) => {
+  //   console.error('Error loading Google Drive API:', error);
 
-    // Add event listener to the iframe to automatically resize its height
-    const iframe = document.getElementById('pdf-iframe');
-    iframe.addEventListener('load', () => {
-      iframe.style.height = `${iframe.contentWindow.document.body.scrollHeight}px`;
-    });
-  }).catch((error) => {
-    console.error('Error loading Google Drive API:', error);
-  });
 }
 
-init();
+async function embedDocIFrame() {
+  const iframe = document.getElementById('pdf-iframe');
+
+  const checkURL = setInterval(async () => {
+    if (window.location.href.includes('http://localhost:8080/mriForm')) {
+      // Trigger the copyAndDisplayFile method
+      console.log('emb');
+      const urlParams = new URLSearchParams(window.location.search);
+      const code = urlParams.get('code');
+      if (code) {
+        const accessToken = await getAccessToken(code);
+        copyAndDisplayFile(accessToken);
+      } else {
+        console.error('No access token found in URL query parameters');
+      }
+
+      // Stop checking the URL
+      clearInterval(checkURL);
+    }
+  }, 100);
+}
+
+async function getAccessToken(code) {
+  console.log(`code: ${code}`);
+  const response = await fetch('https://www.googleapis.com/oauth2/v4/token', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: new URLSearchParams({
+      code,
+      client_id: CLIENT_ID,
+      client_secret: CLIENT_SECRET,
+      redirect_uri: REDIRECT_URI,
+      grant_type: 'authorization_code'
+    })
+});
+
+  // if (!response.ok) {
+  //   throw new Error(`Failed to retrieve access token: ${response.status}`);
+  // }
+
+  const data = await response.json();
+  return data.access_token;
+}
+
+
+gapi.load('client:auth2', loadGDriveApi)
+// init();
+embedDocIFrame(); 

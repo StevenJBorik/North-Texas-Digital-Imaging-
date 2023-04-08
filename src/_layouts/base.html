@@ -4,6 +4,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta http-equiv="Content-Security-Policy" content="script-src https://accounts.google.com/gsi/client; frame-src https://accounts.google.com/gsi/; connect-src https://accounts.google.com/gsi/;"> -->
+
+        <meta name="no-referrer-when-downgrade" content="origin" />
 
         <!--Swap our for actual link-->
         <link rel="canonical" href="https://{{ client.domain }}{{ page.url }}">
@@ -65,11 +68,13 @@
 
         <!-- </script> -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <!-- <script src="https://apis.google.com/js/api.js" async defer></script> -->
+        <script src="https://accounts.google.com/gsi/client"></script>
+
+        <script src="https://apis.google.com/js/api.js"></script>
         <!-- <script src="https://cdn.jsdelivr.net/npm/google-auth-library@7.7.0/build/src/index.js"></script> -->
-        <script src="../assets/js/gdriveApi.js" defer></script> 
-        <script src="https://apis.google.com/js/client.js?onload=initClient()" async defer></script>
-        <script src="https://apis.google.com/js/client.js" async defer></script>
+        <script src="../assets/js/gdriveApi.js"></script> 
+        <script src="https://apis.google.com/js/client.js?onload=initClient()" ></script>
+        <script src="https://apis.google.com/js/client.js" ></script>
 
         <!-- <script>
             gapi.load('auth2', function() {
