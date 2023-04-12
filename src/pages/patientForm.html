@@ -1,0 +1,32 @@
+---
+layout: 'base.html'
+description: "Meta description for the page"
+metaTitle: 'Title that shows up on google searches'
+tagTitle: 'Patient Form'
+preloadCSS: '/css/patientForm.css'
+permalink: 'patientForm/'
+---
+<section id="main-pdf">
+    <div id="pdf-container" class="cs-container">
+      <div id="loading-icon-container">
+        <div class="loading-icon"></div>
+      </div>
+      <iframe id="pdf-iframe1" src="" width="100%" height="900px" allowfullscreen></iframe>
+    </div>
+  </section>
+
+<script>
+    const spinnerContainer = document.getElementById('loading-icon-container');
+    const pdfIframe = document.getElementById('pdf-iframe1');
+
+    pdfIframe.onload = function() {
+    spinnerContainer.style.display = 'none';
+    };
+
+    if (pdfIframe.src === '') {
+    spinnerContainer.style.display = 'block';
+    setTimeout(function() {
+        spinnerContainer.style.display = 'none';
+    }, 7000);
+    }
+</script>

@@ -1,9 +1,10 @@
 
+
 // let gdriveApiLoaded = false;
 const CLIENT_ID = '830042434681-1o28e5ibcbk1k8hbumlh39rfah7a576s.apps.googleusercontent.com';
-const REDIRECT_URI = 'http://localhost:8080/mriForm';
-const FILE_ID = '1tkW2QEB_CVLz0iJqR3iKn6BKnY6AHfUO2VuDkvZegHk';
-const IFRAME_ID = 'pdf-iframe';
+const REDIRECT_URI = 'http://localhost:8080/patientForm';
+const FILE_ID = '11Fj3qrhC9IME4dHN5uGN6bj0yfFYp7wpz7uRnUGMdLY';
+const IFRAME_ID = 'pdf-iframe1';
 const PARENT_FOLDER_ID = '10XCaaS_hQrXJR21frN9kmqTVIfxYtOLf';
 const CLIENT_SECRET = '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';
 const API_KEY = 'AIzaSyBU9xNLl6-KMOtcOrjQ0rf6B9uxnN5w31A';
@@ -131,7 +132,7 @@ async function embedDocIFrame() {
   const iframe = document.getElementById('pdf-iframe');
 
   const checkURL = setInterval(async () => {
-    if (window.location.href.includes('http://localhost:8080/mriForm')) {
+    if (window.location.href.includes('http://localhost:8080/patientForm')) {
       // Trigger the copyAndDisplayFile method
       console.log('emb');
       const urlParams = new URLSearchParams(window.location.search);
