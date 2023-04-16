@@ -101,9 +101,9 @@
   }
   #hero .cs-title {
     /* 39px - 61px */
-    font-size: clamp(2.4375rem, 6.4vw, 3.5125rem);
-    font-weight: 900;
-    line-height: 1.2em;
+    font-size: clamp(2.5375rem, 6.4vw, 2.5125rem);
+    font-weight: 1000;
+    line-height: 2.2em;
     text-align: center;
     width: 100%;
     /* 32px - 40px */
@@ -118,7 +118,7 @@
     text-align: center;
     width: 100%;
     /* 32px - 40px */
-    margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
+    margin: 0 auto clamp(1rem, 4vw, 2.5rem) 0;
     /* 40px - 48px */
     margin-bottom: clamp(2.5rem, 4vw, 3rem);
     color: var(--bodyTextColorWhite);
