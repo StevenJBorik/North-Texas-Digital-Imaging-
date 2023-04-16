@@ -22,20 +22,48 @@
 
           <nav id="navbar-menu" aria-label="main navigation">
             <ul class="menu">
-              <li {% if page.url == '/' %}class="active"{% endif %}><a class="nav-link" href="/">Home</a></li>
-              <li {% if page.url == '/about.html' %}class="active"{% endif %}><a class="nav-link" href="/about">About Us</a></li>
-              <li {% if page.url == '/services.html' %}class="active"{% endif %}><a class="nav-link" href="/services">Services</a></li>
-              <li {% if page.url == '/technology.html' %}class="active"{% endif %}><a class="nav-link" href="/technology">Technology</a></li>
+              <li {% if page.url == '/' %}class="active"{% endif %}>
+                <a class="nav-link" href="/">
+                  <span>Home</span>
+                  <span class="underline"></span>
+                </a>
+              </li>
+              <li {% if page.url == '/about.html' %}class="active"{% endif %}>
+                <a class="nav-link" href="/about">
+                  <span>About Us</span>
+                  <span class="underline"></span>
+                </a>
+              </li>
+              <li {% if page.url == '/services.html' %}class="active"{% endif %}>
+                <a class="nav-link" href="/services">
+                  <span>Services</span>
+                  <span class="underline"></span>
+                </a>
+              </li>
+              <li {% if page.url == '/technology.html' %}class="active"{% endif %}>
+                <a class="nav-link" href="/technology">
+                  <span>Technology</span>
+                  <span class="underline"></span>
+                </a>
+              </li>
               <li class="dropdown">
-                <a class="nav-link dropdown-toggle {% if page.url | contains('/personal-injury/') %}active{% endif %}" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Personal Injury</a>
+                <a class="nav-link dropdown-toggle {% if page.url | contains('/personal-injury/') %}active{% endif %}" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span>Personal Injury</span>
+                  <span class="underline"></span>
+                </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item {% if page.url == '/attorneys.html' %}active{% endif %}" href="/attorneys">Attorneys</a>
-                  <a class="dropdown-item {% if page.url == '/doctors.html' %}active{% endif %}" href="/doctors">Doctors</a>
+                  <a class="dropdown-item {% if page.url == '/attorneys.html' %}active{% endif %}" style="font-size: 15px !important;" href="/attorneys">Attorneys</a>
+                  <a class="dropdown-item {% if page.url == '/doctors.html' %}active{% endif %}" style="font-size: 15px !important;" href="/doctors">Doctors</a>
                 </div>
               </li>
-              <li {% if page.url == '/contact.html' %}class="active"{% endif %}><a class="nav-link" href="/contact">Contact</a></li>
+              <li {% if page.url == '/contact.html' %}class="active"{% endif %}>
+                <a class="nav-link" href="/contact">
+                  <span>Contact</span>
+                  <span class="underline"></span>
+                </a>
+              </li>
             </ul>
-          </nav>
+          </nav>          
       </div>
     </div>
   </body>
