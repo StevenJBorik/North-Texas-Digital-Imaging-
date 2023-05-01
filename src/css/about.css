@@ -31,7 +31,7 @@
     text-align: center;
     max-width: 43.75rem;
     margin: 0 auto 1rem;
-    color: var(--headerColor);
+    color: #fff;
     position: relative;
   }
   #reviews .cs-text {
@@ -85,7 +85,7 @@
     line-height: 1.5em;
     margin: 0 0 1.25rem;
     padding-bottom: 1.25rem;
-    color: #000;
+    color: rgb(77, 3, 3);
     border-bottom: 1px solid #be9393;
   }
   #reviews .cs-reviewer {
@@ -296,7 +296,7 @@
     text-align: left;
     max-width: 50rem;
     margin: 0 auto 1rem;
-    color: var(--headerColor);
+    color: #fff;
     position: relative;
   }
   #sbs .cs-text {
@@ -307,7 +307,7 @@
     max-width: 46.875rem;
     margin: 0 auto;
     margin-bottom: 1rem;
-    color: #000;
+    color: #fff;
   }
   #sbs .cs-text:last-of-type {
     margin-bottom: 2rem;
@@ -315,9 +315,11 @@
   #sbs .cs-flex-group {
     /* 16px - 32px */
     padding: clamp(1rem, 3vw, 2rem);
-    background-color: #FC6268;
+    /* background-color: #FC6268; */
     border-radius: 1rem;
     position: relative;
+    background-color: #ffffff;
+    box-shadow: 0.3em 0.4em rgb(190, 147, 147)
     
   }
   #sbs .cs-flex-p {
@@ -325,7 +327,7 @@
     font-size: clamp(0.875rem, 1.5vw, 1rem);
     line-height: 1.5em;
     margin: 0 0 1rem;
-    color: #000;
+    color: rgb(77, 3, 3);
   }
   #sbs .cs-name {
     font-size: 1rem;

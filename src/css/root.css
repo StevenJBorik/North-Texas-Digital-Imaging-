@@ -50,7 +50,7 @@
     padding: 0;
     font-size: 100%;
     font-family: 'Roboto', Arial, sans-serif;
-    color: #fff;
+    color: #0b6e11;
     overflow-x: hidden;
   }
   *,
@@ -61,7 +61,7 @@
     box-sizing: border-box;
   }
   body {
-    transition: background-color 0.3s;
+    /* transition: background-color 0.3s; */
   }
   .container {
     position: relative;
@@ -76,7 +76,7 @@
   h5,
   h6 {
     margin: 0;
-    color: var(--headerColor);
+    color: #4d0303; 
   }
   p,
   li,
@@ -87,7 +87,7 @@
   }
   p,
   li {
-    color: #575757;
+    color: #fff;
   }
   a:hover,
   button:hover {
@@ -414,12 +414,8 @@ li.dropdown:hover .dropdown-menu {
     border-radius: 0.625em;
     background: var(--primary);
   }
-  body.scroll #navigation .background-color-div {
-    height: 100%;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    
-  }
-  body.scroll #navigation .logo .light {
+
+  /* body.scroll #navigation .logo .light {
     display: none;
   }
   body.scroll #navigation .logo .dark {
@@ -427,7 +423,7 @@ li.dropdown:hover .dropdown-menu {
   }
   body.scroll #navigation #navbar-menu ul li a {
     color: #000;
-  }
+  } */
   body.scroll #dark-mode-toggle svg path {
     fill: #000;
   }
@@ -449,13 +445,7 @@ li.dropdown:hover .dropdown-menu {
 }
 
 #navigation .background-color-div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
-  height: 0;
-  transition: height .3s;
+  background: linear-gradient(.2turn, #ffffff, #f7eeee, #0b6e11); 
 }
 
 #navigation .container {
@@ -507,7 +497,7 @@ li.dropdown:hover .dropdown-menu {
     /* 14px - 18px */
     font-size: clamp(0.875rem, 1.5vw, 1.125rem);
     text-transform: uppercase;
-    color: #fff;
+    color: #4d0303;
     transition: color .3s;
   }
 
@@ -600,7 +590,7 @@ li.dropdown:hover .dropdown-menu {
   } */
 
   #navbar-menu .menu li.dropdown > a:hover {
-    color: #fff;
+    /* color: #fff; */
     text-align: center;
   }
 
@@ -617,7 +607,7 @@ li.dropdown:hover .dropdown-menu {
   
 
   #navbar-menu .menu li.dropdown:hover > a {
-    color: #fff; /* changes color of parent link on hover */
+     /* changes color of parent link on hover */
     text-align: center;
   }
 

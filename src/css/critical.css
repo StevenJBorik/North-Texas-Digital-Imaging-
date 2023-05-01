@@ -308,15 +308,12 @@
     margin-bottom: 0;
   }
   .services .card picture {
-    background-color: #5cbe86;
-    width: 3.75em;
-    height: 3.75em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    margin-bottom: 1.4375em;
-    border-radius: 50%;
+    background:rgb(244, 244, 244);
+    width: 4.15em; 
+    height: 4.15em;
+    border-style: solid;
+    border-color: #4d0303;
+    padding: 2.5rem;
   }
   .services .card picture img {
     width: 3em;
@@ -324,12 +321,8 @@
     border-radius: 5%;
   }
   .services .card h2 {
-    text-align: center;
-    font-size: 1.5em;
-    line-height: 1.35em;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 0.65em;
+    color: #4d0303;
+    font-weight: bold;
   }
   .services .card p {
     text-align: center;

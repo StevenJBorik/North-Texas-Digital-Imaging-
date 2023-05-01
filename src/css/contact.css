@@ -45,7 +45,7 @@
     text-align: left;
     max-width: 50rem;
     margin: 0 auto 1rem 0;
-    color: var(--headerColor);
+    color: #fff;
     position: relative;
   }
   #cs-contact .cs-text {
@@ -69,7 +69,7 @@
     font-weight: 700;
     /* 12px - 20px */
     margin-bottom: clamp(0.75rem, 1.3em, 1.25rem);
-    color: var(--headerColor);
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -94,7 +94,7 @@
   }
   #cs-contact #cs-form input:hover,
   #cs-contact #cs-form textarea:hover {
-    border: 1px solid var(--primary);
+    border: 1px solid #4d0303;
   }
   #cs-contact #cs-form textarea {
     font-family: inherit;
@@ -168,7 +168,7 @@
     line-height: 1.2em;
     font-weight: 700;
     margin-bottom: 2.5rem;
-    color: #000;
+    color: #fff;
     display: block;
   }
   #cs-contact .cs-link {
@@ -177,7 +177,7 @@
     line-height: 1.2em;
     text-decoration: none;
     margin-bottom: 1.25rem;
-    color: #000;
+    color: #fff;
     display: block;
     position: relative;
   }
