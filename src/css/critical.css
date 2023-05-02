@@ -313,7 +313,10 @@
     height: 4.15em;
     border-style: solid;
     border-color: #4d0303;
-    padding: 2.5rem;
+    padding: 1em;
+    margin-left: 4.3em; 
+    display: inline-table; 
+    border-radius: 50%;
   }
   .services .card picture img {
     width: 3em;
@@ -323,6 +326,7 @@
   .services .card h2 {
     color: #4d0303;
     font-weight: bold;
+    text-align: center;
   }
   .services .card p {
     text-align: center;
@@ -360,14 +364,14 @@
   body.dark-mode #services {
     background: #fff;
   }
-  body.dark-mode #services picture {
+  /* body.dark-mode #services picture {
     background:rgb(244, 244, 244);
     width: 4.15em; 
     height: 4.15em;
     border-style: solid;
     border-color: #4d0303;
     padding: 2.5rem;
-  }
+  } */
   body.dark-mode #services h2 {
     color: #4d0303;
     font-weight: bold;

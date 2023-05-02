@@ -406,7 +406,10 @@
     text-align: center;
     border-style: solid;
     border-color: #4d0303;
-    padding: 2.5rem;
+    padding: 1em;
+    border-radius: 50%;
+    display: inline-table;
+
   }
   .gallery .card picture img {
     width: 2.55em;
@@ -467,7 +470,8 @@
     max-width: 43.75rem;
     margin: 0 auto 1rem;
     color: #fff;
-    position: relative
+    position: relative;
+    margin-top: 2em; 
   }
   #gallery-header .cs-container {
     width: 100%;
@@ -606,6 +610,7 @@
   .gallery .card {
     margin: 0;
     max-width: 20.3125em;
+    text-align: center;
     
   }
 
@@ -658,7 +663,7 @@
     text-align:center;
     border-style: solid;
     border-color: #4d0303;
-    padding: 2.5rem;
+    padding: 1rem;
   }
   body.dark-mode #gallery h2 {
     color: #4d0303;
@@ -710,7 +715,7 @@
     text-align: center;
     max-width: 43.75rem;
     margin: 0 auto 1rem;
-    color: var(--headerColor);
+    color: #fff; 
     position: relative;
   }
   #reviews .cs-text {
