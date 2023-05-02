@@ -754,7 +754,7 @@ li.dropdown:hover .dropdown-menu {
     display: block;
     height: 2px;
     width: 80%;
-    background: #000;
+    background: #fff;
     opacity: 1;
     top: -6px;
     left: 0;
@@ -766,7 +766,7 @@ li.dropdown:hover .dropdown-menu {
     display: block;
     height: 2px;
     width: 80%;
-    background: #000;
+    background: #fff;
     opacity: 1;
     top: 6px;
     left: 0;

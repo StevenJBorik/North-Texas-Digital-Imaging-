@@ -397,7 +397,10 @@
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
     margin-bottom: 3.125em;
   }
-
+  .gallery .card {
+    text-align: center;
+    margin-bottom: 1em;
+  }
   .gallery .card picture {
     background: #fff;
     width: 4.15em;
