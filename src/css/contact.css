@@ -261,6 +261,7 @@
     align-items: flex-start;
     gap: 5rem;
     margin-top: 1em;
+    margin-left: 7em; 
   }
   #cs-contact #cs-form {
     max-width: 39.375rem;

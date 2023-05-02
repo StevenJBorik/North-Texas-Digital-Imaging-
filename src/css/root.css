@@ -662,6 +662,10 @@ li.dropdown:hover .dropdown-menu {
   body.dark-mode #navigation .logo .light {
     display: block;
   }
+
+  body #navigation .logo .light {
+    display: block;
+  }
   body.dark-mode #navigation .logo .dark {
     display: none !important;
   }
@@ -689,6 +693,8 @@ li.dropdown:hover .dropdown-menu {
   #navigation .container {
     padding: 0.8125rem 0;
     width: 96%;
+    background: linear-gradient(.2turn, #ffffff, #f7eeee, #0b6e11); 
+
   }
   #navigation .logo {
     display: inline-block;
@@ -735,7 +741,7 @@ li.dropdown:hover .dropdown-menu {
   #navigation .hamburger-menu span {
     height: 2px;
     width: 1.875rem;
-    background-color: #000;
+    background-color: #fff;
     display: block;
     position: absolute;
     left: 50%;
