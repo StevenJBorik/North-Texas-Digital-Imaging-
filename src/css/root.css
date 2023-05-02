@@ -1086,6 +1086,7 @@ li.dropdown:hover .dropdown-menu {
     /* background: #FC6268; */
     padding: 5.25rem 0 1.25rem;
     font-size: min(4vw, 1.2em);
+    background: #fff;
   }
   #footer .left-section {
     margin: auto;
